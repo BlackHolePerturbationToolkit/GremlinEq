@@ -1,6 +1,6 @@
 # Spectre - Teukolsky equation solver for a point particle on a bound, timelike orbit
 
-Spectre is a toolkit for studying solutions to the Teukolsky equation using a point-particle source. SpectreEq is a version of Spectre that specializes the source to circular and equatorial orbits of Kerr black holes. The full Spectre package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources. SpectreEq has been so cleaned, and is hereby provided as an initial released. 
+Spectre is a toolkit for studying solutions to the Teukolsky equation using a point-particle source. SpectreEq is a version of Spectre that specializes the source to circular and equatorial orbits of Kerr black holes. The full Spectre package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources. SpectreEq has been so cleaned, and is hereby provided as an initial release. 
 
 ## Requirements
 
@@ -12,7 +12,7 @@ Spectre depends upon:
 	
 If you are on a Mac these are can be easily installed using [Brew][5]. On Linux the package manager should be able to install them. We're not sure of the best way to install them on Windows (please let us know!)
 	
-To compile Spectre you will need:
+To compile Spectre you will need:  
 	- a C++ compiler (we have tested it with g++)  
 	- Make
 	
