@@ -2,9 +2,9 @@
 
 Spectre is a toolkit for studying solutions to the Teukolsky equation using a point-particle source. SpectreEq is a version of Spectre that specializes the source to circular and equatorial orbits of Kerr black holes. The full Spectre package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources. SpectreEq has been so cleaned, and is hereby provided as an initial released. 
 
-### Requirements
+## Requirements
 
-Spectre depends upon:
+Spectre depends upon:  
 	- The [GNU Scientific Library (GSL)][1] version >= 2.5  
 	- The [GNU Multiple Precision Arithmetic Library (GMP)][2]  
 	- The [Fastest Fourier Transform in the West][3]  
@@ -16,19 +16,19 @@ To compile Spectre you will need:
 	- a C++ compiler (we have tested it with g++)  
 	- Make
 	
-### Execution
+## Execution
 
 Once you have compiled Spectre the binaries are placed in the bin/ folder. The main binary is 'Circ_Eq'. This will output an HDF5 file which contains information about the computed mode. Many other binaries are provided which provide additional function -- see the documentation for details.
 
-### Documentation
+## Documentation
 
 Documentation can be found in doc/doc.pdf
 
-### Authors
+## Authors
 
 Scott Hughes
 
-### References
+
 
 [1]: https://www.gnu.org/software/gsl/
 [2]: https://gmplib.org/
