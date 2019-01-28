@@ -5,16 +5,18 @@ Spectre is a toolkit for studying solutions to the Teukolsky equation using a po
 ## Requirements
 
 Spectre depends upon:  
-	- The [GNU Scientific Library (GSL)][1] version >= 2.5  
-	- The [GNU Multiple Precision Arithmetic Library (GMP)][2]  
-	- The [Fastest Fourier Transform in the West][3]  
-	- The [Hierarchical Data Format][4]  
+
+- The [GNU Scientific Library (GSL)][1] version >= 2.5  
+- The [GNU Multiple Precision Arithmetic Library (GMP)][2]  
+- The [Fastest Fourier Transform in the West][3]  
+- The [Hierarchical Data Format][4]  
 	
 If you are on a Mac these are can be easily installed using [Brew][5]. On Linux the package manager should be able to install them. We're not sure of the best way to install them on Windows (please let us know!)
 	
 To compile Spectre you will need:  
-	- a C++ compiler (we have tested it with g++)  
-	- Make
+
+- a C++ compiler (we have tested it with g++)  
+- Make
 	
 ## Execution
 
