@@ -27,18 +27,19 @@
 TOP = $(CURDIR)
 INCL = $(TOP)/include
 INCLGMP = /usr/local/include
+INCLHDF5 = /usr/local/include
 BIN = $(TOP)/bin
 LIB = $(TOP)/lib
 LIBGMP = /usr/local/lib
+LIBHDF5 = /usr/local/lib
 
 SRC = $(TOP)/src
 CIRCEQSRC = $(SRC)/circeq
 EXECSRC = $(SRC)/exec
-NRSRC = $(SRC)/numrec
 SWSHSRC = $(SRC)/swsh
 FTSRC = $(SRC)/fujtag
 UTILSRC = $(SRC)/utility
-ALLSRCS = $(CIRCEQSRC):$(EXECSRC):$(NRSRC):$(SWSHSRC):$(FTSRC):$(UTILSRC)
+ALLSRCS = $(CIRCEQSRC):$(EXECSRC):$(SWSHSRC):$(FTSRC):$(UTILSRC)
 
 VPATH = $(BIN):$(INCL):$(LIB):$(ALLSRCS)
 
@@ -90,7 +91,7 @@ SWSHOBJS = SWSHCGUtil.o SWSHSpherical.o SWSHSpheroid.o
 
 FTOBJS = FT.o fsum.o gammln.o hypergeom.o radialfrac.o renangmom.o specialradial.o
 
-.INTERMEDIATE : $(CIRCEQOBJS) $(GKGOBJS) $(NROBJS) $(RRGWOBJS) $(TIDALHOBJS) $(SWSHOBJS) $(FTOBJS)
+.INTERMEDIATE : $(CIRCEQOBJS) $(GKGOBJS) $(RRGWOBJS) $(TIDALHOBJS) $(SWSHOBJS) $(FTOBJS)
 
 #############################################################################
 #
@@ -101,8 +102,6 @@ FTOBJS = FT.o fsum.o gammln.o hypergeom.o radialfrac.o renangmom.o specialradial
 CIRCEQCC = CEDR.cc CEID.cc CEKG.cc CEKR.cc CETD.cc
 
 GKGCC = GKG.cc
-
-#NRCC = NRLUbksb.cc NRLUdcmp.cc
 
 RRGWCC = RRGW.cc
 
@@ -128,67 +127,67 @@ all : Circ_Eq Circ_Eq_Seq Circ_Eq_Seq2 Circ_Eq_Traj Circ_Eq_TotFlux_r Circ_Eq_To
 #############################################################################
 
 Circ_Eq : Circ_Eq.cc -lCircEq -lSWSH -lGKG -lFT -lRRGW Globals.h CEKG.h CEKR.h Tensors.h RRGW.h FT.h SWSH.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq.cc -o $(BIN)/Circ_Eq -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq.cc -o $(BIN)/Circ_Eq -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
 
 Circ_Eq_Seq : Circ_Eq_Seq.cc -lCircEq -lSWSH -lGKG -lFT -lRRGW Globals.h CEKG.h CEKR.h CETD.h Tensors.h RRGW.h FT.h SWSH.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Seq.cc -o $(BIN)/Circ_Eq_Seq -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Seq.cc -o $(BIN)/Circ_Eq_Seq -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
 
  Circ_Eq_Seq2 : Circ_Eq_Seq2.cc -lCircEq -lSWSH -lGKG -lFT -lRRGW Globals.h CEKG.h CEKR.h CETD.h Tensors.h RRGW.h FT.h SWSH.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Seq2.cc -o $(BIN)/Circ_Eq_Seq2 -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Seq2.cc -o $(BIN)/Circ_Eq_Seq2 -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
 
 Circ_Eq_Traj : Circ_Eq_Traj.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Traj.cc -o $(BIN)/Circ_Eq_Traj -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Traj.cc -o $(BIN)/Circ_Eq_Traj -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_TotFlux_r : Circ_Eq_TotFlux_r.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_TotFlux_r.cc -o $(BIN)/Circ_Eq_TotFlux_r -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_TotFlux_r.cc -o $(BIN)/Circ_Eq_TotFlux_r -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_TotFlux_v : Circ_Eq_TotFlux_v.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_TotFlux_v.cc -o $(BIN)/Circ_Eq_TotFlux_v -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_TotFlux_v.cc -o $(BIN)/Circ_Eq_TotFlux_v -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_Ymode_v : Circ_Eq_Ymode_v.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Ymode_v.cc -o $(BIN)/Circ_Eq_Ymode_v -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Ymode_v.cc -o $(BIN)/Circ_Eq_Ymode_v -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_Smode_v : Circ_Eq_Smode_v.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Smode_v.cc -o $(BIN)/Circ_Eq_Smode_v -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Smode_v.cc -o $(BIN)/Circ_Eq_Smode_v -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_lmode_v : Circ_Eq_lmode_v.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_lmode_v.cc -o $(BIN)/Circ_Eq_lmode_v -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_lmode_v.cc -o $(BIN)/Circ_Eq_lmode_v -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_mmode_v : Circ_Eq_mmode_v.cc -lCircEq -lSWSH -lRRGW Globals.h CEID.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_mmode_v.cc -o $(BIN)/Circ_Eq_mmode_v -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_mmode_v.cc -o $(BIN)/Circ_Eq_mmode_v -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_Wave : Circ_Eq_Wave.cc -lCircEq -lSWSH -lRRGW Globals.h Tensors.h SWSH.h RRGW.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Wave.cc -o $(BIN)/Circ_Eq_Wave -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Wave.cc -o $(BIN)/Circ_Eq_Wave -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_Clm : Circ_Eq_Clm.cc -lCircEq -lSWSH -lRRGW Globals.h Tensors.h SWSH.h RRGW.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Clm.cc -o $(BIN)/Circ_Eq_Clm -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Clm.cc -o $(BIN)/Circ_Eq_Clm -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Circ_Eq_Clm2 : Circ_Eq_Clm2.cc -lCircEq -lSWSH -lRRGW Globals.h Tensors.h SWSH.h RRGW.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Clm2.cc -o $(BIN)/Circ_Eq_Clm2 -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Circ_Eq_Clm2.cc -o $(BIN)/Circ_Eq_Clm2 -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 Fluxes : Fluxes.cc -lCircEq -lSWSH -lRRGW Globals.h CEDR.h Tensors.h SWSH.h RRGW.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Fluxes.cc -o $(BIN)/Fluxes -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Fluxes.cc -o $(BIN)/Fluxes -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 GW : GW.cc -lCircEq -lSWSH -lRRGW Globals.h CEDR.h RRGW.h SWSH.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/GW.cc -o $(BIN)/GW -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCirceq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/GW.cc -o $(BIN)/GW -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCirceq -lSWSH -lRRGW $(SYSLIBS)
 
 TidalHSurf : TidalHSurf.cc -lCircEq -lFT -lGKG -lSWSH  Globals.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
-	$(CC) $(CFLAGS) $(EXECSRC)/TidalHSurf.cc -o $(BIN)/TidalHSurf -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lFT -lGKG -lSWSH  $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/TidalHSurf.cc -o $(BIN)/TidalHSurf -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lSWSH  $(SYSLIBS)
 
 TidalHEq : TidalHEq.cc -lCircEq -lFT -lGKG -lTidalH -lSWSH  Globals.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
-	$(CC) $(CFLAGS) $(EXECSRC)/TidalHEq.cc -o $(BIN)/TidalHEq -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/TidalHEq.cc -o $(BIN)/TidalHEq -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
 
 EmbedEq : EmbedEq.cc -lCircEq -lFT -lGKG -lTidalH -lSWSH  Globals.h TidalH.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
-	$(CC) $(CFLAGS) $(EXECSRC)/EmbedEq.cc -o $(BIN)/EmbedEq -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/EmbedEq.cc -o $(BIN)/EmbedEq -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
 
 EmbedEq_lmode : EmbedEq_lmode.cc -lCircEq -lFT -lGKG -lTidalH -lSWSH  Globals.h TidalH.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
-	$(CC) $(CFLAGS) $(EXECSRC)/EmbedEq_lmode.cc -o $(BIN)/EmbedEq_lmode -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/EmbedEq_lmode.cc -o $(BIN)/EmbedEq_lmode -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
 
 EmbedSurf : EmbedSurf.cc -lCircEq -lFT -lGKG -lTidalH -lSWSH  Globals.h TidalH.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
-	$(CC) $(CFLAGS) $(EXECSRC)/EmbedSurf.cc -o $(BIN)/EmbedSurf -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/EmbedSurf.cc -o $(BIN)/EmbedSurf -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lTidalH -lSWSH  $(SYSLIBS)
 
 Wrapper : Wrapper.cc -lCircEq -lSWSH -lGKG -lFT -lRRGW Globals.h CEKG.h CEKR.h Tensors.h RRGW.h FT.h SWSH.h
-	$(CC) $(CFLAGS) $(EXECSRC)/Wrapper.cc -o $(BIN)/Wrapper -I$(INCL) -I$(INCLGMP) -L$(LIB) -L$(LIBGMP) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/Wrapper.cc -o $(BIN)/Wrapper -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lGKG -lFT -lRRGW $(SYSLIBS)
 
 #############################################################################
 #
@@ -222,7 +221,7 @@ Wrapper : Wrapper.cc -lCircEq -lSWSH -lGKG -lFT -lRRGW Globals.h CEKG.h CEKR.h T
 #############################################################################
 
 %.o : %.cc
-	$(CC) $(CFLAGS) -I$(INCL) -I$(INCLGMP) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -c $< -o $@
 
 #############################################################################
 #
