@@ -35,7 +35,7 @@
 #include "Globals.h"
 #include "CEID.h"
 
-extern "C" int isnan(double);
+//extern "C" int isnan(double);
 
 int main(int argc, char **argv)
 {

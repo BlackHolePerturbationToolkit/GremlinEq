@@ -16,7 +16,9 @@
 #include <complex>
 #include "complex_ops.h"
 
-extern "C" int isnan(double);
+//extern "C" int isnan(double);
+
+using namespace std;
 
 /* The precision to use
  * 0 float

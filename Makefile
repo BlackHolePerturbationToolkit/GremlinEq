@@ -118,7 +118,7 @@ FTCC = FT.cc fsum.cc gammln.cc hypergeom.cc radialfrac.cc renangmom.cc \
 #
 #############################################################################
 
-all : Circ_Eq Circ_Eq_Seq Circ_Eq_Seq2 Circ_Eq_Traj Circ_Eq_TotFlux_r Circ_Eq_TotFlux_v Circ_Eq_Ymode_v Circ_Eq_Smode_v Circ_Eq_lmode_v Circ_Eq_mmode_v Circ_Eq_Wave Circ_Eq_Clm Circ_Eq_Clm2 Fluxes GW TidalHSurf TidalHEq EmbedEq EmbedEq_lmode EmbedSurf Wrapper
+all : Circ_Eq Circ_Eq_Seq Circ_Eq_Seq2 Circ_Eq_Traj Circ_Eq_TotFlux_r Circ_Eq_TotFlux_v Circ_Eq_Ymode_v Circ_Eq_Smode_v Circ_Eq_lmode_v Circ_Eq_mmode_v Circ_Eq_Wave Circ_Eq_Clm Circ_Eq_Clm2 Fluxes GW  Wrapper
 
 #############################################################################
 #
