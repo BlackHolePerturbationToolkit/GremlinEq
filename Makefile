@@ -169,7 +169,7 @@ Fluxes : Fluxes.cc -lCircEq -lSWSH -lRRGW Globals.h CEDR.h Tensors.h SWSH.h RRGW
 	$(CC) $(CFLAGS) $(EXECSRC)/Fluxes.cc -o $(BIN)/Fluxes -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 GW : GW.cc -lCircEq -lSWSH -lRRGW Globals.h CEDR.h RRGW.h SWSH.h Tensors.h
-	$(CC) $(CFLAGS) $(EXECSRC)/GW.cc -o $(BIN)/GW -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCirceq -lSWSH -lRRGW $(SYSLIBS)
+	$(CC) $(CFLAGS) $(EXECSRC)/GW.cc -o $(BIN)/GW -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lSWSH -lRRGW $(SYSLIBS)
 
 TidalHSurf : TidalHSurf.cc -lCircEq -lFT -lGKG -lSWSH  Globals.h CEKR.h CEKG.h FT.h SWSH.h Tensors.h fsum.h
 	$(CC) $(CFLAGS) $(EXECSRC)/TidalHSurf.cc -o $(BIN)/TidalHSurf -I$(INCL) -I$(INCLGMP) -I$(INCLHDF5) -L$(LIB) -L$(LIBGMP) -L$(LIBHDF5) -lCircEq -lFT -lGKG -lSWSH  $(SYSLIBS)
