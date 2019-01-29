@@ -4,17 +4,9 @@
 ##
 #############################################################################
 #
-# Makefile for SpectreEq
+# Makefile for GremlinEq
 #
 #############################################################################
-#
-# NOTE: You must have the environment variable LD_RUN_PATH set to point to
-# the GMP directory if you do not have a system-wide install of GMP!  On
-# the MIT cluster, I have
-# 
-# setenv LD_RUN_PATH /nfs/corscorpii/d0/sahughes/Util/GMP/lib
-#
-############################################################################
 
 .PHONY : dummy
 
@@ -118,7 +110,11 @@ FTCC = FT.cc fsum.cc gammln.cc hypergeom.cc radialfrac.cc renangmom.cc \
 #
 #############################################################################
 
-all : Circ_Eq Circ_Eq_Seq Circ_Eq_Seq2 Circ_Eq_Traj Circ_Eq_TotFlux_r Circ_Eq_TotFlux_v Circ_Eq_Ymode_v Circ_Eq_Smode_v Circ_Eq_lmode_v Circ_Eq_mmode_v Circ_Eq_Wave Circ_Eq_Clm Circ_Eq_Clm2 Fluxes GW  Wrapper
+all : core #horizgeom
+
+core : Circ_Eq Circ_Eq_Seq Circ_Eq_Seq2 Circ_Eq_Traj Circ_Eq_TotFlux_r Circ_Eq_TotFlux_v Circ_Eq_Ymode_v Circ_Eq_Smode_v Circ_Eq_lmode_v Circ_Eq_mmode_v Circ_Eq_Wave Circ_Eq_Clm Circ_Eq_Clm2 Fluxes GW Wrapper
+
+horizgeom : EmbedEq EmbedEq_lmode EmbedSurf TidalHEq TidalHSurf
 
 #############################################################################
 #
