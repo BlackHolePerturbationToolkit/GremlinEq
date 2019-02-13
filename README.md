@@ -20,7 +20,7 @@ To compile GremlinEq you will need:
 	
 ## Execution
 
-Once you have compiled GremlinEq the binaries are placed in the bin/ folder. The main binary is 'Circ_Eq'. This will output an HDF5 file which contains information about the computed mode. Many other binaries are provided which provide additional function -- see the documentation for details.
+Once you have compiled GremlinEq the binaries are placed in the bin/ folder. The main binary is 'Circ_Eq'. This will output an HDF5 file which contains information about the computed mode. Many other binaries are provided which provide additional functions -- see the documentation for details.
 
 ## Documentation
 
