@@ -8,13 +8,19 @@
 // HDF5 format data reader for circular equatorial case
 //
 #include <cmath>
+#include <sys/stat.h>
 #include <hdf5_hl.h>
 #include "Globals.h"
 #include "CEDR.h"
 
 CEDR::CEDR(char inname[])
 {
-  infile = H5Fopen(inname, H5F_ACC_RDONLY, H5P_DEFAULT);
+  if(fileExists(inname)){
+    infile = H5Fopen(inname, H5F_ACC_RDONLY, H5P_DEFAULT);
+  }else{
+	cout << "File named " << inname << " not found. Exiting." << endl;
+	exit(0);
+  } 
   //
   // Orbit parameters
   //
@@ -39,6 +45,13 @@ CEDR::CEDR(char inname[])
 CEDR::~CEDR()
 {
   H5Fclose(infile);
+}
+
+// Check if a file exists
+bool CEDR::fileExists(const std::string& filename){
+    struct stat buf;
+    if (stat(filename.c_str(), &buf) != -1) return true;
+    return false;
 }
 
 int CEDR::ReadData(const int l, const int m)

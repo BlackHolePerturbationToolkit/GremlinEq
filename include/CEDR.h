@@ -40,5 +40,9 @@ public:
   Complex ZI, ZH;
   Complex Rin, dRin, Rup, dRup;
   Real EdotI, EdotH, LzdotI, LzdotH, rdotI, rdotH;
+  
+private:
+	bool fileExists(const std::string& filename);		
+  
 };
 #endif
