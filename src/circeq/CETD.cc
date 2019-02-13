@@ -10,6 +10,7 @@
 #include <cmath>
 #include "Globals.h"
 #include "CETD.h"
+#include "CEDR.h"
 #include "GKG.h"
 #include "CEKG.h"
 #include "SWSH.h"
@@ -33,14 +34,30 @@ CETD::CETD(const int orbitsense, const Real rad, const Real spin, char outbase[]
   //
   hsize_t dim[1]; dim[0] = 5;
   Real params[5] = {r, a, cekg->E, cekg->Lz, cekg->Om_phi};
+ 
   //
-  // Create the file.  Make a group for the modes (which will contain all
-  // the data we wish to store) and a group for the orbital parameters.
+  // Check if a file already exists with the same spacetime/orbit parameters. 
+  // If so write to this file. Otherwise create a new file
   //
   sprintf(outname, "%s.h5", outbase);
-  hdffile = H5Fcreate(outname, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
-  hid_t group_id = H5Gcreate2(hdffile, "/modes", H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  H5LTmake_dataset_double(hdffile, "/params", 1, dim, params);
+  CEDR cedr(outname);
+  if(cedr.exists){
+	  hdffile = cedr.infile;
+	  
+      Real file_params[5];
+      H5LTread_dataset_double(cedr.infile, "/params/", file_params);
+	  for(int n = 0; n < 5; n++){
+		if(file_params[n] != params[n]) {
+			cout << "Output file " << outname << " exists but has different spacetime/orbit parameters. Please choose a different filename." << endl;
+			exit(0);
+		}
+	  }
+  }else{
+	  hdffile = H5Fcreate(outname, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+	  hid_t group_id = H5Gcreate2(hdffile, "/modes", H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+	  H5LTmake_dataset_double(hdffile, "/params", 1, dim, params);
+  }
+  
 }
 
 CETD::~CETD()
@@ -49,13 +66,13 @@ CETD::~CETD()
   // Before deleting various objects and closing the file, write out the
   // index range.
   //
-  hsize_t dim[1]; dim[0] = 4;
-  int indexrange[4] = {lmin, lmax, mmin, mmax};
-  H5LTmake_dataset_int(hdffile, "/indexrange", 1, dim, indexrange);
+  //hsize_t dim[1]; dim[0] = 4;
+
+  //H5LTmake_dataset_int(hdffile, "/indexrange", 1, dim, indexrange);
   //
   delete rrgw;
   delete cekg;
-  H5Fclose(hdffile);
+   H5Fclose(hdffile);
 }
 
 void CETD::Driver(const int lmax)
@@ -216,7 +233,39 @@ void CETD::DoHarmonic(const int l, const int m)
 		       Rin.real(), Rin.imag(), dRin.real(), dRin.imag(),
 		       Rup.real(), Rup.imag(), dRup.real(), dRup.imag(),
 		       EdotI, EdotH, LzdotI, LzdotH, rdotI, rdotH};
-  H5LTmake_dataset_double(hdffile, dataset, 1, dim, modedata);
+  
+  
+	if(H5Lexists(hdffile, dataset, H5P_DEFAULT)){
+		hid_t dataset_id = H5Dopen2(hdffile, dataset, H5P_DEFAULT);
+		H5Dwrite(dataset_id, H5T_NATIVE_DOUBLE, H5S_ALL, H5S_ALL, H5P_DEFAULT, modedata);
+		H5Dclose(dataset_id);
+	}else{
+        H5LTmake_dataset_double(hdffile, dataset, 1, dim, modedata);
+    }
+	
+	if(H5Lexists(hdffile, "/indexrange", H5P_DEFAULT)){
+		int indexrange[4] = {2, 10, 1, 10};
+		hid_t dataset_id = H5Dopen2(hdffile, "/indexrange", H5P_DEFAULT);
+		
+		H5Dread(dataset_id, H5T_NATIVE_INT, H5S_ALL, H5S_ALL, H5P_DEFAULT, indexrange);
+		if(l < indexrange[0]) indexrange[0] = l;
+		if(l > indexrange[1]) indexrange[1] = l;
+		if(m < indexrange[2]) indexrange[2] = m;
+		if(m > indexrange[3]) indexrange[3] = m;
+			
+		H5Dwrite(dataset_id, H5T_NATIVE_INT, H5S_ALL, H5S_ALL, H5P_DEFAULT, indexrange);
+		H5Dclose(dataset_id);
+		
+	}else{
+      int indexrange[4] = {l,l,m,m}; 		
+  	  dim[0] = 4;
+  	  H5LTmake_dataset_int(hdffile, "/indexrange", 1, dim, indexrange);
+		
+	}
+	
+  	//FIXME: move indexrange stuff here
+  
+  
   //
   // Below output is just to follow along on long runs.  Comment out if you don't
   // care to read it.

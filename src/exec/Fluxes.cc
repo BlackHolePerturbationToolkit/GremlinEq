@@ -14,11 +14,6 @@
 #include "Tensors.h"
 #include "SWSH.h"
 #include "RRGW.h"
-#define SRATE 12000.0      // Hz
-#define MSUN 4.92e-6       // seconds
-#define HOUR 3600.
-#define CLIGHT 3.00e10     // cm/sec
-#define MEGAPARSEC 3.09e24 // cm
 
 int main(int argc, char **argv)
 {
@@ -75,6 +70,11 @@ int main(int argc, char **argv)
   // Open data
   //
   CEDR cedr(inname);
+  if(!cedr.exists){
+	  cout << "File " << inname << " does not exist" << endl;
+	  exit(0);
+  }
+  
   r = cedr.r; a = cedr.a;
   E = cedr.E; Lz = cedr.Lz;
   Om_phi = cedr.Om_phi;
@@ -124,15 +124,6 @@ int main(int argc, char **argv)
   //
   Real v = pow(fabs(Om_phi), 1./3.);
   Real EdotN = (32./5.)*pow(v, 10.);
-//   Real EPNT = 1. - 3.71130952380952381*pow(v,2.)
-//     + 12.5663706143591730*pow(v,3.) - 4.92846119929453263*pow(v,4.)
-//     - 38.2928354546934470*pow(v,5.)
-//     + (115.731716675611331 - 16.3047619047619048*log(v))*pow(v,6.)
-//     - 101.509595959741638*pow(v,7.)
-//     - (117.504390722677329 - 52.7430839002267574*log(v))*pow(v,8.)
-//     + (719.128342233429702 - 204.891680874122896*log(v))*pow(v,9.)
-//     - (1216.90699131704196 - 116.639876594109398*log(v))*pow(v,10.)
-//     + (958.934970119566876 + 473.624478174230623*log(v))*pow(v,11.);
 
   fprintf(stdout, "EdotH: %.16e EdotI: %.16e Edottot: %.16e\n",
  	  EdotH_tot/EdotN, EdotI_tot/EdotN, (EdotH_tot + EdotI_tot)/EdotN);

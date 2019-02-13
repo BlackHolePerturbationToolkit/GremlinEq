@@ -16,35 +16,36 @@
 CEDR::CEDR(char inname[])
 {
   if(fileExists(inname)){
-    infile = H5Fopen(inname, H5F_ACC_RDONLY, H5P_DEFAULT);
+	exists = true;
+    infile = H5Fopen(inname, H5F_ACC_RDWR, H5P_DEFAULT);
+    //
+    // Orbit parameters
+    //
+    Real params[5];
+    H5LTread_dataset_double(infile, "/params/", params);
+    r = params[0];
+    a = params[1];
+    E = params[2];
+    Lz = params[3];
+    Om_phi = params[4];
+    //
+    // Range over which the indices span
+    //
+    int indexrange[4];
+    H5LTread_dataset_int(infile, "/indexrange", indexrange);
+    lmin = indexrange[0];
+    lmax = indexrange[1];
+    mmin = indexrange[2];
+    mmax = indexrange[3];
+	
   }else{
-	cout << "File named " << inname << " not found. Exiting." << endl;
-	exit(0);
-  } 
-  //
-  // Orbit parameters
-  //
-  Real params[5];
-  H5LTread_dataset_double(infile, "/params/", params);
-  r = params[0];
-  a = params[1];
-  E = params[2];
-  Lz = params[3];
-  Om_phi = params[4];
-  //
-  // Range over which the indices span
-  //
-  int indexrange[4];
-  H5LTread_dataset_int(infile, "/indexrange", indexrange);
-  lmin = indexrange[0];
-  lmax = indexrange[1];
-  mmin = indexrange[2];
-  mmax = indexrange[3];
+	exists = false;
+  }
 }
 
 CEDR::~CEDR()
 {
-  H5Fclose(infile);
+	//H5Fclose(infile);
 }
 
 // Check if a file exists

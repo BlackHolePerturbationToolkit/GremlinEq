@@ -41,6 +41,8 @@ public:
   Complex Rin, dRin, Rup, dRup;
   Real EdotI, EdotH, LzdotI, LzdotH, rdotI, rdotH;
   
+  bool exists;
+  
 private:
 	bool fileExists(const std::string& filename);		
   
