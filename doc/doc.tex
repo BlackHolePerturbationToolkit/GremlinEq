@@ -25,7 +25,7 @@
 % Start the document
 \begin{document}
 
-\title{SpectreEq:\\ Solving the Teukolsky equation with a point-particle source\\ Version specialized to circular and equatorial orbits}
+\title{GremlinEq:\\ Solving the Teukolsky equation with a point-particle source\\ Version specialized to circular and equatorial orbits}
 \author{Scott A.\ Hughes\thanks{\tt sahughes@mit.edu}\\
 Department of Physics\\
 Massachusetts Institute of Technology\\
@@ -35,7 +35,7 @@ Cambridge, MA 02139, USA}
 
 \begin{abstract}
 \noindent
-Spectre is a toolkit for studying solutions to the Teukolsky equation using a point-particle source.  SpectreEq is a version of Spectre that specializes the source to circular and equatorial orbits of Kerr black holes.  The full Spectre package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources.  SpectreEq has been so cleaned, and is hereby provided as an initial released.  This document will evolve into a full manual.  Presently, it provides directions for installing the package, a synopsis of its contents, and a guide to its use.
+Gremlin\footnote{This package has had multiple names over the years.  When the code was initially being put together (c.\ 1998), it was called ``Pebble,'' to evoke a small body orbiting a black hole.  When I began sharing version with people, I started calling it ``Gremlin,'' which was intended to more-or-less stand for Gravitational Radiation in the Extreme Mass-ratio LIMit (and then magically changing that ``M'' to an ``N'').  When I changed the core integrator to one based on the Mano-Suzuki-Takasugi (MST) method, I renamed it ``Spectre,'' as the MST method is essentially a spectral method for solving Teukolsky.  In the meantime, the numerical relativity community has taken ownership of code with names that sound like ``spec,'' so it was decided to go back to the name Gremlin.} is a toolkit for studying solutions to the Teukolsky equation using a point-particle source.  GremlinEq is a version of Gremlin that specializes the source to circular and equatorial orbits of Kerr black holes.  The full Gremlin package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources.  GremlinEq has been so cleaned, and is hereby provided as an initial release.  This document will evolve into a full manual.  Presently, it provides directions for installing the package, a synopsis of its contents, and a guide to its use.
 \end{abstract}
 
 \section{Installing}
@@ -44,19 +44,19 @@ Since you are reading this document, I presume you have successfully downloaded 
 
 \begin{enumerate}
 
-\item Install libraries.  SpectreEq uses the following packages: The GNU Scientific Library (GSL) {\cite{gsl}}; the GNU Multiple Precision Library (GMP) {\cite{gmp}}; the Fastest Fourier Transform in the West (FFTW) {\cite{fftw}}; and the Hierarchical Data Format, version 5 (HDF5) {\cite{hdf}}.  All of these packages can be easily installed on Apple systems using Homebrew {\cite{homebrew}}; I would appreciate feedback from users about installation on other unix-type systems.  (I offer no advice regarding installation on Windows-based systems, for which I have no relevant expertise at all.)
+\item Install libraries.  GremlinEq uses the following packages: The GNU Scientific Library (GSL) {\cite{gsl}}; the GNU Multiple Precision Library (GMP) {\cite{gmp}}; the Fastest Fourier Transform in the West (FFTW) {\cite{fftw}}; and the Hierarchical Data Format, version 5 (HDF5) {\cite{hdf}}.  All of these packages can be easily installed on Apple systems using Homebrew {\cite{homebrew}}; I would appreciate feedback from users about installation on other unix-type systems.  (I offer no advice regarding installation on Windows-based systems, for which I have no relevant expertise at all.)
 
 The code is known to compile with the following versions of these libraries: GSL version 2.5; GMP version 6.1.2; FFTW version 3.3.8; and HDF5 version 1.10.4.  As I type this sentence, these are the most up-to-date version provided by Homebrew.
 
-\item Edit the Makefile.  Depending on the version of ``make'' on your system, the variable CURDIR may not be defined.  If that is the case, change the variable TOP to point to whichever directory on your system holds SpectreEq.  You may also need to teach the Makefile about the location of the different libraries and include files associated with those libraries.  Homebrew tends to put relevant files into /usr/local/include and /usr/local/lib; if that is the case for you, then the present variables should be sufficient.  Otherwise, you may need define additional variables defining the location of header files and libraries, and modify the linking steps in the Makefile appropriately.
+\item Edit the Makefile.  Depending on the version of ``make'' on your system, the variable CURDIR may not be defined.  If that is the case, change the variable TOP to point to whichever directory on your system holds GremlinEq.  You may also need to teach the Makefile about the location of the different libraries and include files associated with those libraries.  Homebrew tends to put relevant files into /usr/local/include and /usr/local/lib; if that is the case for you, then the present variables should be sufficient.  Otherwise, you may need define additional variables defining the location of header files and libraries, and modify the linking steps in the Makefile appropriately.
 
 \item ``make''.  If all goes well, the output of this should be a set of libraries in the ``lib'' directory, and a set of executables in ``bin''.  If anything fails, you may need to discuss with Hughes (at least until there has been sufficient testing to document a set of failure modes).
 
 \end{enumerate}
 
-\section{SpectreEq's contents}
+\section{GremlinEq's contents}
 
-Spectre and SpectreEq are at heart a set of libraries which define C++ classes that can be used to study the Teukolsky equation's solutions.  The executables are essentially wrapper codes for these libraries.  In this section, I very briefly describe the key classes.  {\it This is quite minimal at present.}  For now, I presume that the user is sufficiently expert that they can read the code and deduce how to use the different classes once their purpose is defined.
+Gremlin and GremlinEq are at heart a set of libraries which define C++ classes that can be used to study the Teukolsky equation's solutions.  The executables are essentially wrapper codes for these libraries.  In this section, I very briefly describe the key classes.  {\it This is quite minimal at present.}  For now, I presume that the user is sufficiently expert that they can read the code and deduce how to use the different classes once their purpose is defined.
 
 \subsection{Class SWSH}
 
@@ -148,7 +148,7 @@ Solves the Teukolsky equation for all $m$ modes up to some $\ell_{\rm max}$ over
 
 \subsection{Circ\_Eq\_Seq2}
 
-Solves the Teukolsky equation over a range of radii for all $m$modes, including enough $\ell$ modes to insure that the fractional convergence in flux is within a specified $\epsilon$, but that at least $(\ell_{\rm max})_{\rm min}$ $\ell$ modes have been included.  The data is evenly spaced in $v \equiv (M\Omega_\phi)^{1/3}$, where $\Omega_\phi$ is the axial frequency of circular equatorial Kerr orbits.
+Solves the Teukolsky equation over a range of radii for all $m$ modes, including enough $\ell$ modes to insure that the fractional convergence in flux is within a specified $\epsilon$, but that at least $(\ell_{\rm max})_{\rm min}$ $\ell$ modes have been included.  The data is evenly spaced in $v \equiv (M\Omega_\phi)^{1/3}$, where $\Omega_\phi$ is the axial frequency of circular equatorial Kerr orbits.
 
 \subsection{Fluxes}
 
@@ -162,9 +162,9 @@ Take data produced by one of the codes above and produce the gravitational wavef
 
 Produce summary data for the total flux of energy and angular momentum carried from an orbit, for data evenly spaced in orbital radius.  Typically paired with Circ\_Eq\_Seq.
 
-\subsection{Circ\_Eq\_TotFlux\_c}
+\subsection{Circ\_Eq\_TotFlux\_v}
 
-Produce summary data for the total flux of energy and angular momentum carried from an orbit, for data evenly spaced in orbital radius$v$.  Typically paired with Circ\_Eq\_Seq2.
+Produce summary data for the total flux of energy and angular momentum carried from an orbit, for data evenly spaced in $v = (M\Omega_\phi)^{1/3}$.  Typically paired with Circ\_Eq\_Seq2.
 
 \subsection{Circ\_Eq\_Traj}
 
@@ -214,6 +214,8 @@ Examines the embedding geometry of an event horizon distorted by an orbiting com
 
 Examines the embedding geometry of an event horizon distorted by an orbiting companion; surveys the entire horizon surface.
 
+Note that the executables TidalHEq, TidalHSurf, EmbedEq, and EmbedSurf require GSL version 2.5.  These bits were used for one project and may not be of general interest.  In the current release, the Makefile is set up such that ``make all'' will not make these executables; ``make horizgeom'' will make them.
+
 \clearpage
 
 \section*{Social contract}
@@ -224,11 +226,11 @@ This code uses multiple packages and libraries that use the Free Software Founda
 
 \item If your use of this code leads to results that appear in a published article, please reference the code as follows:
 
-S.\ A.\ Hughes, computer code {\sc SpectreEq}, available from the Black Hole Perturbation Toolkit\\ (http://bhptoolkit.org)
+S.\ A.\ Hughes, computer code {\sc GremlinEq}, available from the Black Hole Perturbation Toolkit\\ (http://bhptoolkit.org)
 
 \item If you modify or improve the code, please do not branch a new release.  Instead, please submit your change, improvement, or bugfix to Hughes.  Your change may then be incorporated into the main codebase and included in the main public Toolkit branch.  Note that I cannot legally enforce this, hence I consider this to be more of a social contact while we gear up for a true public release.
 
-\item If you find the code useful and like it, you run into me (Hughes) at a conference, you agree to buy me 1 beer.  I like ales, porters, and stouts.
+\item If you find the code useful and like it, and you run into me (Hughes) at a conference, you agree to buy me 1 beer.  I like ales, porters, and stouts.
 
 \end{enumerate}
 
@@ -236,7 +238,7 @@ S.\ A.\ Hughes, computer code {\sc SpectreEq}, available from the Black Hole Per
 
 Over the 20+ years that this package has been developed, this work has been partially supported by numerous grants from the National Science Foundation and NASA to the California Institute of Technology, the Kavli Institute for Theoretical Physics at the University of California at Santa Barbara, the Massachusetts Institute of Technology, and Cornell University, as well as various fellowships and internal support provided to Hughes and students at MIT.  On a later release, I intend to catalog and enumerate all these different sources of support.
 
-The development of this software benefitted greatly from interactions with many different people.  Special mention for contributions in the earliest days goes to Daniel Kennefick (a particularly helpful and a valuable source of advice and wisdom in the development of this work, not to a source of comparison data that helped to the core Teukolsky code), Sam Finn (who provided a great deal of advice and validation data), Saul Teukolsky (who originally suggested that the spin-weighted spheroidal harmonics could be spectrally decomposed using the spin-weighted spherical harmonics as basis functions), and Eric Poisson (who supervised my first project in black hole perturbation theory [in 1993!], guided me through the literature on Teukolsky-equation-based radiation reaction, and was wonderfully patient as I pestered him with oodles of naive and [undoubtedly] irritating questions).
+The development of this software benefitted greatly from interactions with many different people.  Special mention for contributions in the earliest days goes to Daniel Kennefick (a particularly helpful and a valuable source of advice and wisdom in the development of this work, not to mention a source of comparison data that helped validate the core Teukolsky code), Sam Finn (who provided a great deal of advice and validation data), Saul Teukolsky (who originally suggested that the spin-weighted spheroidal harmonics could be spectrally decomposed using the spin-weighted spherical harmonics as basis functions), and Eric Poisson (who supervised my first project in black hole perturbation theory [in 1993!], guided me through the literature on Teukolsky-equation-based radiation reaction, and was wonderfully patient as I pestered him with oodles of naive and [undoubtedly] irritating questions).
 
 Special mention for later work and contributions goes to Steve Drasco (whose work on the generic source composed a major part of his Ph.D.\ thesis), William Throwe (whose work implementing the MST method as described in papers by Fujita-Tagoshi formed his undergraduate thesis), Niels Warburton, and Maarten van de Meent.
 
