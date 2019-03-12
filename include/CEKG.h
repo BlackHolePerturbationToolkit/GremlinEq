@@ -16,11 +16,20 @@
 #include <cmath>
 #include "Globals.h"
 
+//! Circular Equatorial Kerr Geodesic Class
+/*! Defines methods for computing various quantities related to circular, equatorial Kerr geodesics. */
 class CEKG {
 public:
+  //! A constructor for the CEKG Class.
+	/*!
+      Initialized with orientation (prograde/retrograde), orbital radius, and spin. Circular equatorial Kerr geodesics only.
+	*/
   CEKG(const int orbitsense, const Real rad, const Real spin);
 
-  Real r, a;
-  Real E, Lz, Om_phi;
+  Real r; /*!< orbital radius */
+  Real a; /*!< spin paramter*/
+  Real E; /*!< energy */
+  Real Lz; /*!< z component of angular momentum */
+  Real Om_phi; /*!< Carter constant */
 };
 #endif

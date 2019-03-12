@@ -1,0 +1,115 @@
+\hypertarget{class_c_e_i_d}{}\doxysection{C\+E\+ID Class Reference}
+\label{class_c_e_i_d}\index{CEID@{CEID}}
+
+
+Circular Equatorial Inspiral Data Class.  
+
+
+
+
+{\ttfamily \#include $<$C\+E\+I\+D.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_ab7715eeda0f1d013b642dd54aa163081}\label{class_c_e_i_d_ab7715eeda0f1d013b642dd54aa163081}} 
+{\bfseries C\+E\+ID} (char $\ast$basename, const Real arrmin, const Real rmax, const Real dr, const int ellmax)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a1fa9b3ad09d0c1776333559bbb26eebf}\label{class_c_e_i_d_a1fa9b3ad09d0c1776333559bbb26eebf}} 
+{\bfseries C\+E\+ID} (char $\ast$basename, const int Nhi, const int ellmax)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a8a0a13599992b428f6b353c377dd9530}\label{class_c_e_i_d_a8a0a13599992b428f6b353c377dd9530}} 
+void {\bfseries Spheroids} (const Real costheta\+\_\+view)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a5c5461c6a6bcd254b4051396705e6635}\label{class_c_e_i_d_a5c5461c6a6bcd254b4051396705e6635}} 
+void {\bfseries Get\+\_\+rdot\+\_\+omega} (const Real r)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_ac749079ae467e8effc5be1506370f0f2}\label{class_c_e_i_d_ac749079ae467e8effc5be1506370f0f2}} 
+void {\bfseries Get\+\_\+fluxes} (const Real r)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a96a40383aa5e0978b1ceeb426b056ef0}\label{class_c_e_i_d_a96a40383aa5e0978b1ceeb426b056ef0}} 
+void {\bfseries Get\+\_\+wave} (const Real r, const Real phi, const Real phi\+\_\+view)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a0e25018065f64586f5d950560d5626dc}\label{class_c_e_i_d_a0e25018065f64586f5d950560d5626dc}} 
+void {\bfseries Get\+\_\+flux\+\_\+\+Smode} (const Real r, const int l, const int m, Real \&Edot\+Hlm, Real \&Edot\+Ilm)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a7db92c8ffd9ed5f64efade3f8e805ae5}\label{class_c_e_i_d_a7db92c8ffd9ed5f64efade3f8e805ae5}} 
+void {\bfseries Get\+\_\+flux\+\_\+mmode} (const Real r, const int m, Real \&Edot\+Hm, Real \&Edot\+Im)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aafe1d856f20115f88a7ea62c67a76efd}\label{class_c_e_i_d_aafe1d856f20115f88a7ea62c67a76efd}} 
+void {\bfseries Get\+\_\+flux\+\_\+lmode} (const Real r, const int l, Real \&Edot\+Hl, Real \&Edot\+Il)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aa82f340efb404c17681a6912fcbd1182}\label{class_c_e_i_d_aa82f340efb404c17681a6912fcbd1182}} 
+void {\bfseries Get\+\_\+flux\+\_\+\+Ymode} (const Real r, const int l, const int m, Real \&Edot\+Hlm, Real \&Edot\+Ilm)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_ac94c09b8bc1262dff2ff24ad8fd54daa}\label{class_c_e_i_d_ac94c09b8bc1262dff2ff24ad8fd54daa}} 
+void {\bfseries Get\+\_\+\+Z\+Ilm} (const Real r, const int l, const int m, Complex \&Z\+Ilm)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a03da2c98a5f3dadb044d39d0b65b6669}\label{class_c_e_i_d_a03da2c98a5f3dadb044d39d0b65b6669}} 
+void {\bfseries Get\+\_\+\+C\+Ilm} (const Real r, const Real phi, const int l, const int m, Complex \&C\+Ilm)
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a47256b045853570a7f2cc961beccef44}\label{class_c_e_i_d_a47256b045853570a7f2cc961beccef44}} 
+void {\bfseries Spline\+\_\+\+C\+Ilm} (const int l, const int m)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a5c4ab16fb76dcb631bdb44020a49dab1}\label{class_c_e_i_d_a5c4ab16fb76dcb631bdb44020a49dab1}} 
+Real {\bfseries rdot}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a85ff0e776de6db6598f8c5e52971ca5a}\label{class_c_e_i_d_a85ff0e776de6db6598f8c5e52971ca5a}} 
+Real {\bfseries rdot\+\_\+noH}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aed47a753384b9d8598ade87907b7ed43}\label{class_c_e_i_d_aed47a753384b9d8598ade87907b7ed43}} 
+Real {\bfseries Omega}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aa54f101f2478bd96ebc7091280b186fe}\label{class_c_e_i_d_aa54f101f2478bd96ebc7091280b186fe}} 
+Real {\bfseries Omega\+\_\+max}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_ae366d2e93544c458a4dad9ba0820c093}\label{class_c_e_i_d_ae366d2e93544c458a4dad9ba0820c093}} 
+Real {\bfseries rmin}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_ada91a38fa38266abcf893c637a6bdd27}\label{class_c_e_i_d_ada91a38fa38266abcf893c637a6bdd27}} 
+Real {\bfseries EdotI}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a910c1c72b229fc5e4e2ea13eefc4faec}\label{class_c_e_i_d_a910c1c72b229fc5e4e2ea13eefc4faec}} 
+Real {\bfseries LzdotI}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a434611dc30b5315d2a3c3d46bf601eff}\label{class_c_e_i_d_a434611dc30b5315d2a3c3d46bf601eff}} 
+Real {\bfseries EdotH}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a83d2100334bea84fb2b1136af16ff734}\label{class_c_e_i_d_a83d2100334bea84fb2b1136af16ff734}} 
+Real {\bfseries LzdotH}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a9754ca300cf0df0110f0663ee75337ad}\label{class_c_e_i_d_a9754ca300cf0df0110f0663ee75337ad}} 
+Real {\bfseries hp}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aeda43656bf2bb0a338bb81bc7a855057}\label{class_c_e_i_d_aeda43656bf2bb0a338bb81bc7a855057}} 
+Real {\bfseries hc}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_afc4ba241568128525a11f284dbbc0e82}\label{class_c_e_i_d_afc4ba241568128525a11f284dbbc0e82}} 
+Real {\bfseries r\+\_\+isco}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aa4d25ad886bb70c3c4ef48fe90635611}\label{class_c_e_i_d_aa4d25ad886bb70c3c4ef48fe90635611}} 
+Real {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_a719c316b83ec8d44cb0ea11ef2bacc7a}\label{class_c_e_i_d_a719c316b83ec8d44cb0ea11ef2bacc7a}} 
+int {\bfseries jmax}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_afaa3014b7b90cc58bbc9e633e3fb2898}\label{class_c_e_i_d_afaa3014b7b90cc58bbc9e633e3fb2898}} 
+Real $\ast$ {\bfseries r\+\_\+arr}
+\item 
+\mbox{\Hypertarget{class_c_e_i_d_aa06c39ebba6765e19a8453a9b9db9229}\label{class_c_e_i_d_aa06c39ebba6765e19a8453a9b9db9229}} 
+int $\ast$ {\bfseries max\+\_\+l\+\_\+computed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Circular Equatorial Inspiral Data Class. 
+
+This class uses \mbox{\hyperlink{class_c_e_d_r}{C\+E\+DR}}, and provides methods for smoothly interpolating through a large set of output from many orbits to study waveforms and inspirals. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/C\+E\+I\+D.\+h\item 
+src/circeq/C\+E\+I\+D.\+cc\end{DoxyCompactItemize}

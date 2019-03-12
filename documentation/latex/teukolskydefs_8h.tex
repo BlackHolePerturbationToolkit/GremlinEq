@@ -1,0 +1,321 @@
+\hypertarget{teukolskydefs_8h}{}\doxysection{include/teukolskydefs.h File Reference}
+\label{teukolskydefs_8h}\index{include/teukolskydefs.h@{include/teukolskydefs.h}}
+{\ttfamily \#include $<$cfloat$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include \char`\"{}complex\+\_\+ops.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_abcceaf0c139431e5994d3fcc7d992c48}{T\+E\+U\+K\+O\+L\+S\+K\+Y\+D\+E\+F\+S\+\_\+\+H\+\_\+\+S\+E\+EN}}
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a78ce812eb37bcc49f0fd24432b39a4f0}{R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}{L\+R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ad67c9e5eca306ad563585da3c1892301}{fs\+Re}}~\char`\"{}f\char`\"{}
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}{R\+E\+A\+L\+\_\+\+E\+P\+S\+I\+L\+ON}}~D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}}
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}~(\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(0,1))
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(func)~\mbox{\hyperlink{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(func,\mbox{\hyperlink{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}})
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(a,  b)~\mbox{\hyperlink{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,b)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,  b)~a \#\# b
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmax)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ab6b58b71fb489287373c1fd811609f52}{Fmin}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmin)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fabs)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}{Sqrt}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(sqrt)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_a592199c23758c1280cc7318f1009619d}{C\+N\+AN}}~\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(N\+AN,N\+AN)
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_acc089ea40c5615ef206d0459e8d255b0}{Cisnan}}(x)~(isnan(real(x)) $\vert$$\vert$ isnan(imag(x)))
+\item 
+\#define \mbox{\hyperlink{_f_t_8h_ad7c46d920fb5365cb0151cf9c446617c}{Cmaxpart}}(x)~(\mbox{\hyperlink{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}(\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(real(x)),\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(imag(x))))
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a7db5e8ee7c27e6fb5c9caf9d674ea949}{R\+E\+A\+L\+\_\+\+T\+Y\+PE}}~1
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a78ce812eb37bcc49f0fd24432b39a4f0}{R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}{L\+R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}}~L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ad67c9e5eca306ad563585da3c1892301}{fs\+Re}}~\char`\"{}f\char`\"{}
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}{R\+E\+A\+L\+\_\+\+E\+P\+S\+I\+L\+ON}}~D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}}
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}~(\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(0,1))
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(func)~\mbox{\hyperlink{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(func,\mbox{\hyperlink{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}})
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(a,  b)~\mbox{\hyperlink{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,b)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,  b)~a \#\# b
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmax)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ab6b58b71fb489287373c1fd811609f52}{Fmin}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmin)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fabs)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a3fbd8d8a562a86d88e9730f655b973eb}{Sqrt}}~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(sqrt)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_a592199c23758c1280cc7318f1009619d}{C\+N\+AN}}~\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(N\+AN,N\+AN)
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_acc089ea40c5615ef206d0459e8d255b0}{Cisnan}}(x)~(isnan(real(x)) $\vert$$\vert$ isnan(imag(x)))
+\item 
+\#define \mbox{\hyperlink{teukolskydefs_8h_ad7c46d920fb5365cb0151cf9c446617c}{Cmaxpart}}(x)~(\mbox{\hyperlink{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}(\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(real(x)),\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(imag(x))))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef double \mbox{\hyperlink{teukolskydefs_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}
+\item 
+typedef long double \mbox{\hyperlink{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}{Long\+Real}}
+\item 
+typedef std\+::complex$<$ \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $>$ \mbox{\hyperlink{teukolskydefs_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}
+\item 
+typedef std\+::complex$<$ \mbox{\hyperlink{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}{Long\+Real}} $>$ \mbox{\hyperlink{teukolskydefs_8h_a22478003419631bb399b456cfd0c0c12}{Long\+Complex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_f_t_8h_acc089ea40c5615ef206d0459e8d255b0}\label{_f_t_8h_acc089ea40c5615ef206d0459e8d255b0}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Cisnan@{Cisnan}}
+\index{Cisnan@{Cisnan}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Cisnan}{Cisnan}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Cisnan(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(isnan(real(x)) $\vert$$\vert$ isnan(imag(x)))}
+
+\mbox{\Hypertarget{teukolskydefs_8h_acc089ea40c5615ef206d0459e8d255b0}\label{teukolskydefs_8h_acc089ea40c5615ef206d0459e8d255b0}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Cisnan@{Cisnan}}
+\index{Cisnan@{Cisnan}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Cisnan}{Cisnan}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Cisnan(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(isnan(real(x)) $\vert$$\vert$ isnan(imag(x)))}
+
+\mbox{\Hypertarget{_f_t_8h_ad7c46d920fb5365cb0151cf9c446617c}\label{_f_t_8h_ad7c46d920fb5365cb0151cf9c446617c}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Cmaxpart@{Cmaxpart}}
+\index{Cmaxpart@{Cmaxpart}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Cmaxpart}{Cmaxpart}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Cmaxpart(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}(\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(real(x)),\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(imag(x))))}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ad7c46d920fb5365cb0151cf9c446617c}\label{teukolskydefs_8h_ad7c46d920fb5365cb0151cf9c446617c}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Cmaxpart@{Cmaxpart}}
+\index{Cmaxpart@{Cmaxpart}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Cmaxpart}{Cmaxpart}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Cmaxpart(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}{Fmax}}(\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(real(x)),\mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(imag(x))))}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a592199c23758c1280cc7318f1009619d}\label{teukolskydefs_8h_a592199c23758c1280cc7318f1009619d}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!CNAN@{CNAN}}
+\index{CNAN@{CNAN}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{CNAN}{CNAN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define C\+N\+AN~\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(N\+AN,N\+AN)}
+
+\mbox{\Hypertarget{_f_t_8h_a592199c23758c1280cc7318f1009619d}\label{_f_t_8h_a592199c23758c1280cc7318f1009619d}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!CNAN@{CNAN}}
+\index{CNAN@{CNAN}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{CNAN}{CNAN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define C\+N\+AN~\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(N\+AN,N\+AN)}
+
+\mbox{\Hypertarget{_f_t_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}\label{_f_t_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fabs@{Fabs}}
+\index{Fabs@{Fabs}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fabs}{Fabs}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Fabs~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fabs)}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}\label{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fabs@{Fabs}}
+\index{Fabs@{Fabs}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fabs}{Fabs}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Fabs~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fabs)}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}\label{teukolskydefs_8h_a409846cf22be6cacab23fb10feef34c1}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fmax@{Fmax}}
+\index{Fmax@{Fmax}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fmax}{Fmax}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Fmax~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmax)}
+
+\mbox{\Hypertarget{_f_t_8h_a409846cf22be6cacab23fb10feef34c1}\label{_f_t_8h_a409846cf22be6cacab23fb10feef34c1}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fmax@{Fmax}}
+\index{Fmax@{Fmax}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fmax}{Fmax}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Fmax~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmax)}
+
+\mbox{\Hypertarget{_f_t_8h_ab6b58b71fb489287373c1fd811609f52}\label{_f_t_8h_ab6b58b71fb489287373c1fd811609f52}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fmin@{Fmin}}
+\index{Fmin@{Fmin}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fmin}{Fmin}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Fmin~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmin)}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ab6b58b71fb489287373c1fd811609f52}\label{teukolskydefs_8h_ab6b58b71fb489287373c1fd811609f52}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Fmin@{Fmin}}
+\index{Fmin@{Fmin}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Fmin}{Fmin}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Fmin~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(fmin)}
+
+\mbox{\Hypertarget{_f_t_8h_ad67c9e5eca306ad563585da3c1892301}\label{_f_t_8h_ad67c9e5eca306ad563585da3c1892301}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!fsRe@{fsRe}}
+\index{fsRe@{fsRe}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{fsRe}{fsRe}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define fs\+Re~\char`\"{}f\char`\"{}}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ad67c9e5eca306ad563585da3c1892301}\label{teukolskydefs_8h_ad67c9e5eca306ad563585da3c1892301}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!fsRe@{fsRe}}
+\index{fsRe@{fsRe}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{fsRe}{fsRe}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define fs\+Re~\char`\"{}f\char`\"{}}
+
+\mbox{\Hypertarget{_f_t_8h_a468e76046f99617d999e4935c0e2b0bc}\label{_f_t_8h_a468e76046f99617d999e4935c0e2b0bc}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!FUNC\_CONCAT@{FUNC\_CONCAT}}
+\index{FUNC\_CONCAT@{FUNC\_CONCAT}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_CONCAT}{FUNC\_CONCAT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~\mbox{\hyperlink{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,b)}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}\label{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!FUNC\_CONCAT@{FUNC\_CONCAT}}
+\index{FUNC\_CONCAT@{FUNC\_CONCAT}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_CONCAT}{FUNC\_CONCAT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~\mbox{\hyperlink{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER}}(a,b)}
+
+\mbox{\Hypertarget{_f_t_8h_abd7970ddf1bac37de837c28929244fdb}\label{_f_t_8h_abd7970ddf1bac37de837c28929244fdb}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!FUNC\_CONCAT\_INNER@{FUNC\_CONCAT\_INNER}}
+\index{FUNC\_CONCAT\_INNER@{FUNC\_CONCAT\_INNER}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_CONCAT\_INNER}{FUNC\_CONCAT\_INNER}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a \#\# b}
+
+\mbox{\Hypertarget{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}\label{teukolskydefs_8h_abd7970ddf1bac37de837c28929244fdb}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!FUNC\_CONCAT\_INNER@{FUNC\_CONCAT\_INNER}}
+\index{FUNC\_CONCAT\_INNER@{FUNC\_CONCAT\_INNER}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{FUNC\_CONCAT\_INNER}{FUNC\_CONCAT\_INNER}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+I\+N\+N\+ER(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a \#\# b}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}\label{teukolskydefs_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!I@{I}}
+\index{I@{I}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{I}{I}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define I~(\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(0,1))}
+
+\mbox{\Hypertarget{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}\label{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!I@{I}}
+\index{I@{I}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{I}{I}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define I~(\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}(0,1))}
+
+\mbox{\Hypertarget{_f_t_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}\label{_f_t_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!LREAL\_MANT\_DIG@{LREAL\_MANT\_DIG}}
+\index{LREAL\_MANT\_DIG@{LREAL\_MANT\_DIG}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{LREAL\_MANT\_DIG}{LREAL\_MANT\_DIG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}\label{teukolskydefs_8h_ac84ceb8b5e68aeceef0b48e27d5c0662}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!LREAL\_MANT\_DIG@{LREAL\_MANT\_DIG}}
+\index{LREAL\_MANT\_DIG@{LREAL\_MANT\_DIG}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{LREAL\_MANT\_DIG}{LREAL\_MANT\_DIG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~L\+D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}
+
+\mbox{\Hypertarget{_f_t_8h_ae66485932fbd96bbd0c60addc803b9b9}\label{_f_t_8h_ae66485932fbd96bbd0c60addc803b9b9}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!MAKE\_PRECFUNC@{MAKE\_PRECFUNC}}
+\index{MAKE\_PRECFUNC@{MAKE\_PRECFUNC}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_PRECFUNC}{MAKE\_PRECFUNC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})~\mbox{\hyperlink{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(func,\mbox{\hyperlink{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}})}
+
+\mbox{\Hypertarget{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}\label{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!MAKE\_PRECFUNC@{MAKE\_PRECFUNC}}
+\index{MAKE\_PRECFUNC@{MAKE\_PRECFUNC}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_PRECFUNC}{MAKE\_PRECFUNC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})~\mbox{\hyperlink{teukolskydefs_8h_a468e76046f99617d999e4935c0e2b0bc}{F\+U\+N\+C\+\_\+\+C\+O\+N\+C\+AT}}(func,\mbox{\hyperlink{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}{P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}})}
+
+\mbox{\Hypertarget{_f_t_8h_a0c80f5bc683309b39016a8528d20a6ef}\label{_f_t_8h_a0c80f5bc683309b39016a8528d20a6ef}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!PREC\_FUNCSUFFIX@{PREC\_FUNCSUFFIX}}
+\index{PREC\_FUNCSUFFIX@{PREC\_FUNCSUFFIX}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{PREC\_FUNCSUFFIX}{PREC\_FUNCSUFFIX}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}\label{teukolskydefs_8h_a0c80f5bc683309b39016a8528d20a6ef}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!PREC\_FUNCSUFFIX@{PREC\_FUNCSUFFIX}}
+\index{PREC\_FUNCSUFFIX@{PREC\_FUNCSUFFIX}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{PREC\_FUNCSUFFIX}{PREC\_FUNCSUFFIX}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+R\+E\+C\+\_\+\+F\+U\+N\+C\+S\+U\+F\+F\+IX}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}\label{teukolskydefs_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!REAL\_EPSILON@{REAL\_EPSILON}}
+\index{REAL\_EPSILON@{REAL\_EPSILON}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{REAL\_EPSILON}{REAL\_EPSILON}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define R\+E\+A\+L\+\_\+\+E\+P\+S\+I\+L\+ON~D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON}
+
+\mbox{\Hypertarget{_f_t_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}\label{_f_t_8h_a268bd688a4b5c8bb1c12bfdb92e27a1d}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!REAL\_EPSILON@{REAL\_EPSILON}}
+\index{REAL\_EPSILON@{REAL\_EPSILON}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{REAL\_EPSILON}{REAL\_EPSILON}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define R\+E\+A\+L\+\_\+\+E\+P\+S\+I\+L\+ON~D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a78ce812eb37bcc49f0fd24432b39a4f0}\label{teukolskydefs_8h_a78ce812eb37bcc49f0fd24432b39a4f0}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!REAL\_MANT\_DIG@{REAL\_MANT\_DIG}}
+\index{REAL\_MANT\_DIG@{REAL\_MANT\_DIG}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{REAL\_MANT\_DIG}{REAL\_MANT\_DIG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}
+
+\mbox{\Hypertarget{_f_t_8h_a78ce812eb37bcc49f0fd24432b39a4f0}\label{_f_t_8h_a78ce812eb37bcc49f0fd24432b39a4f0}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!REAL\_MANT\_DIG@{REAL\_MANT\_DIG}}
+\index{REAL\_MANT\_DIG@{REAL\_MANT\_DIG}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{REAL\_MANT\_DIG}{REAL\_MANT\_DIG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define R\+E\+A\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG~D\+B\+L\+\_\+\+M\+A\+N\+T\+\_\+\+D\+IG}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a7db5e8ee7c27e6fb5c9caf9d674ea949}\label{teukolskydefs_8h_a7db5e8ee7c27e6fb5c9caf9d674ea949}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!REAL\_TYPE@{REAL\_TYPE}}
+\index{REAL\_TYPE@{REAL\_TYPE}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{REAL\_TYPE}{REAL\_TYPE}}
+{\footnotesize\ttfamily \#define R\+E\+A\+L\+\_\+\+T\+Y\+PE~1}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a3fbd8d8a562a86d88e9730f655b973eb}\label{teukolskydefs_8h_a3fbd8d8a562a86d88e9730f655b973eb}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Sqrt}{Sqrt}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define Sqrt~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(sqrt)}
+
+\mbox{\Hypertarget{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}\label{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Sqrt}{Sqrt}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define Sqrt~\mbox{\hyperlink{teukolskydefs_8h_ae66485932fbd96bbd0c60addc803b9b9}{M\+A\+K\+E\+\_\+\+P\+R\+E\+C\+F\+U\+NC}}(sqrt)}
+
+\mbox{\Hypertarget{_f_t_8h_abcceaf0c139431e5994d3fcc7d992c48}\label{_f_t_8h_abcceaf0c139431e5994d3fcc7d992c48}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!TEUKOLSKYDEFS\_H\_SEEN@{TEUKOLSKYDEFS\_H\_SEEN}}
+\index{TEUKOLSKYDEFS\_H\_SEEN@{TEUKOLSKYDEFS\_H\_SEEN}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{TEUKOLSKYDEFS\_H\_SEEN}{TEUKOLSKYDEFS\_H\_SEEN}}
+{\footnotesize\ttfamily \#define T\+E\+U\+K\+O\+L\+S\+K\+Y\+D\+E\+F\+S\+\_\+\+H\+\_\+\+S\+E\+EN}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{teukolskydefs_8h_ae71815a9f70bd1d668591ffd98814a01}\label{teukolskydefs_8h_ae71815a9f70bd1d668591ffd98814a01}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Complex@{Complex}}
+\index{Complex@{Complex}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Complex}{Complex}}
+{\footnotesize\ttfamily typedef std\+::complex$<$\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}$>$ \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a22478003419631bb399b456cfd0c0c12}\label{teukolskydefs_8h_a22478003419631bb399b456cfd0c0c12}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!LongComplex@{LongComplex}}
+\index{LongComplex@{LongComplex}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{LongComplex}{LongComplex}}
+{\footnotesize\ttfamily typedef std\+::complex$<$\mbox{\hyperlink{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}{Long\+Real}}$>$ \mbox{\hyperlink{teukolskydefs_8h_a22478003419631bb399b456cfd0c0c12}{Long\+Complex}}}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}\label{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!LongReal@{LongReal}}
+\index{LongReal@{LongReal}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{LongReal}{LongReal}}
+{\footnotesize\ttfamily typedef long double \mbox{\hyperlink{teukolskydefs_8h_a329072317042a5bb1202c9fd71a49162}{Long\+Real}}}
+
+\mbox{\Hypertarget{teukolskydefs_8h_a445a5f0e2a34c9d97d69a3c2d1957907}\label{teukolskydefs_8h_a445a5f0e2a34c9d97d69a3c2d1957907}} 
+\index{teukolskydefs.h@{teukolskydefs.h}!Real@{Real}}
+\index{Real@{Real}!teukolskydefs.h@{teukolskydefs.h}}
+\doxysubsubsection{\texorpdfstring{Real}{Real}}
+{\footnotesize\ttfamily typedef double \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}
+

@@ -27,6 +27,9 @@
 #define OFFSET 0
 
 template<class TypeHere>
+
+//! Tensors Class
+/*! This is a container class for memory allocation routines which define multi-index objects with arbitrary index range. They are inspired by Numerical Recipe’s such routines [e.g., vector() and matrix()], but have been implemented in a new way and use C++ templates to make arrays of arbitrary type. */
 class Tensor {
  public:
   static TypeHere *vector(const long al, const long ah)

@@ -18,7 +18,8 @@
 #include <gsl/gsl_spline.h>
 
 #define LRANGE 100
-
+//! Circular Equatorial Inspiral Data Class
+/*! This class uses CEDR, and provides methods for smoothly interpolating through a large set of output from many orbits to study waveforms and inspirals. */
 class CEID {
 public:
   CEID(char *basename, const Real arrmin, const Real rmax, const Real dr,

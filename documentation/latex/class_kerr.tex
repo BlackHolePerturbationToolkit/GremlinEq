@@ -1,0 +1,141 @@
+\hypertarget{class_kerr}{}\doxysection{Kerr Class Reference}
+\label{class_kerr}\index{Kerr@{Kerr}}
+
+
+\mbox{\hyperlink{class_kerr}{Kerr}} Quantities Class.  
+
+
+
+
+{\ttfamily \#include $<$Globals.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Real \mbox{\hyperlink{class_kerr_a94c8ea3aaf4dd8c017fe61bc75be7a41}{rplus}} (const Real a)
+\item 
+static Real \mbox{\hyperlink{class_kerr_a1d7b0fc449ce41bb26845b05abdffa2e}{rminus}} (const Real a)
+\item 
+static Real \mbox{\hyperlink{class_kerr_a84b726a760d5fc06a05ab28c9b5b0baf}{rstar}} (const Real r, const Real a)
+\item 
+static Real \mbox{\hyperlink{class_kerr_ac16c403dba79a948a5d626805f47ce11}{Delta}} (const Real r, const Real a)
+\item 
+static Real \mbox{\hyperlink{class_kerr_a96a88bdf5ca3795f4bbae66ceb8dca64}{dr\+\_\+\+Delta}} (const Real r)
+\item 
+static Real \mbox{\hyperlink{class_kerr_abc59b7ed290436e59881ce0bd3c07b09}{ddr\+\_\+\+Delta}} ()
+\item 
+static Real \mbox{\hyperlink{class_kerr_abe8be093d08d3c7f45f02600b3f7cea0}{Sigma}} (const Real r, const Real a, const Real z)
+\item 
+static Real \mbox{\hyperlink{class_kerr_a3d121d5f14a2986b0a26fe7db9b4813e}{dr\+\_\+\+Sigma}} (const Real r)
+\item 
+static Real \mbox{\hyperlink{class_kerr_a4bbd98670846eedf82eeee7264edd669}{ddr\+\_\+\+Sigma}} ()
+\item 
+\mbox{\Hypertarget{class_kerr_ab84f61e48fbc93e915236b440118f1bf}\label{class_kerr_ab84f61e48fbc93e915236b440118f1bf}} 
+static Real {\bfseries Eeqpro} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_a034c00142caa86b0acd593b6fa5e9d02}\label{class_kerr_a034c00142caa86b0acd593b6fa5e9d02}} 
+static Real {\bfseries Eeqret} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_a7071fce0ab0df18ba75a34c27a1d8f56}\label{class_kerr_a7071fce0ab0df18ba75a34c27a1d8f56}} 
+static Real {\bfseries Lzeqpro} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_a03f8c3488f809f910e1a7f973ff16232}\label{class_kerr_a03f8c3488f809f910e1a7f973ff16232}} 
+static Real {\bfseries Lzeqret} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_aa4ad6f1da19d20864c288c2c908bb0a7}\label{class_kerr_aa4ad6f1da19d20864c288c2c908bb0a7}} 
+static Real {\bfseries Omega\+\_\+phi\+\_\+eqpro} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_ad44ab9f4c9dea0d3b37de6780c7e58b1}\label{class_kerr_ad44ab9f4c9dea0d3b37de6780c7e58b1}} 
+static Real {\bfseries Omega\+\_\+phi\+\_\+eqret} (const Real r, const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_a73d388476ed3cabc8a98e0ed3ac98764}\label{class_kerr_a73d388476ed3cabc8a98e0ed3ac98764}} 
+static Real {\bfseries isco\+\_\+pro} (const Real a)
+\item 
+\mbox{\Hypertarget{class_kerr_a049b176c836af96c1940e4e69c6d56f1}\label{class_kerr_a049b176c836af96c1940e4e69c6d56f1}} 
+static Real {\bfseries isco\+\_\+ret} (const Real a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_kerr}{Kerr}} Quantities Class. 
+
+This is a simple container class for a collection of useful simply static functions that pop up over and over again when studying \mbox{\hyperlink{class_kerr}{Kerr}} black hole orbits. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_kerr_abc59b7ed290436e59881ce0bd3c07b09}\label{class_kerr_abc59b7ed290436e59881ce0bd3c07b09}} 
+\index{Kerr@{Kerr}!ddr\_Delta@{ddr\_Delta}}
+\index{ddr\_Delta@{ddr\_Delta}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{ddr\_Delta()}{ddr\_Delta()}}
+{\footnotesize\ttfamily static Real Kerr\+::ddr\+\_\+\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+All right, so this one\textquotesingle{}s kind of silly ...d$^\wedge$2\textbackslash{}\+Delta/dr$^\wedge$2 = 2 \end{quote}
+\mbox{\Hypertarget{class_kerr_a4bbd98670846eedf82eeee7264edd669}\label{class_kerr_a4bbd98670846eedf82eeee7264edd669}} 
+\index{Kerr@{Kerr}!ddr\_Sigma@{ddr\_Sigma}}
+\index{ddr\_Sigma@{ddr\_Sigma}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{ddr\_Sigma()}{ddr\_Sigma()}}
+{\footnotesize\ttfamily static Real Kerr\+::ddr\+\_\+\+Sigma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+All right, so this one\textquotesingle{}s kind of silly too ...d$^\wedge$2\textbackslash{}\+Sigma/dr$^\wedge$2 = 2 \end{quote}
+\mbox{\Hypertarget{class_kerr_ac16c403dba79a948a5d626805f47ce11}\label{class_kerr_ac16c403dba79a948a5d626805f47ce11}} 
+\index{Kerr@{Kerr}!Delta@{Delta}}
+\index{Delta@{Delta}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{Delta()}{Delta()}}
+{\footnotesize\ttfamily static Real Kerr\+::\+Delta (\begin{DoxyParamCaption}\item[{const Real}]{r,  }\item[{const Real}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+\textbackslash{}\+Delta = r$^\wedge$2 -\/ 2 M r + a$^\wedge$2 \end{quote}
+\mbox{\Hypertarget{class_kerr_a96a88bdf5ca3795f4bbae66ceb8dca64}\label{class_kerr_a96a88bdf5ca3795f4bbae66ceb8dca64}} 
+\index{Kerr@{Kerr}!dr\_Delta@{dr\_Delta}}
+\index{dr\_Delta@{dr\_Delta}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{dr\_Delta()}{dr\_Delta()}}
+{\footnotesize\ttfamily static Real Kerr\+::dr\+\_\+\+Delta (\begin{DoxyParamCaption}\item[{const Real}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+d\textbackslash{}\+Delta/dr = 2 r -\/ 2 M \end{quote}
+\mbox{\Hypertarget{class_kerr_a3d121d5f14a2986b0a26fe7db9b4813e}\label{class_kerr_a3d121d5f14a2986b0a26fe7db9b4813e}} 
+\index{Kerr@{Kerr}!dr\_Sigma@{dr\_Sigma}}
+\index{dr\_Sigma@{dr\_Sigma}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{dr\_Sigma()}{dr\_Sigma()}}
+{\footnotesize\ttfamily static Real Kerr\+::dr\+\_\+\+Sigma (\begin{DoxyParamCaption}\item[{const Real}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+d\textbackslash{}\+Sigma/dr = 2 r \end{quote}
+\mbox{\Hypertarget{class_kerr_a1d7b0fc449ce41bb26845b05abdffa2e}\label{class_kerr_a1d7b0fc449ce41bb26845b05abdffa2e}} 
+\index{Kerr@{Kerr}!rminus@{rminus}}
+\index{rminus@{rminus}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{rminus()}{rminus()}}
+{\footnotesize\ttfamily static Real Kerr\+::rminus (\begin{DoxyParamCaption}\item[{const Real}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+r\+\_\+-\/ = M -\/ \textbackslash{}sqrt\{M$^\wedge$2 -\/ a$^\wedge$2\} \end{quote}
+\mbox{\Hypertarget{class_kerr_a94c8ea3aaf4dd8c017fe61bc75be7a41}\label{class_kerr_a94c8ea3aaf4dd8c017fe61bc75be7a41}} 
+\index{Kerr@{Kerr}!rplus@{rplus}}
+\index{rplus@{rplus}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{rplus()}{rplus()}}
+{\footnotesize\ttfamily static Real Kerr\+::rplus (\begin{DoxyParamCaption}\item[{const Real}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+r\+\_\++ = M + \textbackslash{}sqrt\{M$^\wedge$2 + a$^\wedge$2\}; M \textbackslash{}equiv 1 \end{quote}
+\mbox{\Hypertarget{class_kerr_a84b726a760d5fc06a05ab28c9b5b0baf}\label{class_kerr_a84b726a760d5fc06a05ab28c9b5b0baf}} 
+\index{Kerr@{Kerr}!rstar@{rstar}}
+\index{rstar@{rstar}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{rstar()}{rstar()}}
+{\footnotesize\ttfamily static Real Kerr\+::rstar (\begin{DoxyParamCaption}\item[{const Real}]{r,  }\item[{const Real}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+r$^\wedge$$\ast$ = r + 2 r\+\_\++/(r\+\_\++ -\/ r\+\_\+-\/) \textbackslash{}ln\{(r -\/ r\+\_\++)/2M\} -\/ 2 r\+\_\+-\//(r\+\_\++ -\/ r\+\_\+-\/) \textbackslash{}ln\{(r -\/ r\+\_\+-\/)/2M\} \end{quote}
+\mbox{\Hypertarget{class_kerr_abe8be093d08d3c7f45f02600b3f7cea0}\label{class_kerr_abe8be093d08d3c7f45f02600b3f7cea0}} 
+\index{Kerr@{Kerr}!Sigma@{Sigma}}
+\index{Sigma@{Sigma}!Kerr@{Kerr}}
+\doxysubsubsection{\texorpdfstring{Sigma()}{Sigma()}}
+{\footnotesize\ttfamily static Real Kerr\+::\+Sigma (\begin{DoxyParamCaption}\item[{const Real}]{r,  }\item[{const Real}]{a,  }\item[{const Real}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{quote}
+\textbackslash{}\+Sigma = r$^\wedge$2 + a$^\wedge$2 \textbackslash{}cos$^\wedge$2\textbackslash{}theta \end{quote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Globals.\+h\end{DoxyCompactItemize}

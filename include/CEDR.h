@@ -12,6 +12,8 @@
 #include <hdf5_hl.h>
 #include "Globals.h"
 
+//! Circular Equatorial Data Reader Class
+/*! CEDR stands for circular, equatorial data reader. This class collects methods which read the output of a data run (i.e., the HDF5 data produced by the code) and present it in human readable format. */
 class CEDR {
 public:
   CEDR(char inname[]);

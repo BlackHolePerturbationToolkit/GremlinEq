@@ -18,46 +18,44 @@
 
 #define FT_PRFX FT::
 
+//! Fujita Tagoshi Class
+/*! FT defines methods for computing solutions to the homogeneous Teukolsky equation as laid out in papers by Ryuichi Fujita and Hideyushi Tagoshi */
 class FT {
 public:
   FT(const int l, const int m, const Real r, const Real a, const Real omega,
      const Real lambda, const Real tolerance);
   FT(const int l, const int m, const Real p, const Real ecc, const Real a,
      const Real omega, const Real lambda, const Real tolerance);
+  
+  Complex Bin()    { return b_inc; } /*!< asymptotic amplitude */
+  Complex Btrans() { return b_trans; } /*!< asymptotic amplitudes */
+  Complex Ctrans() { return c_trans; } /*!< asymptotic amplitudes */
 
-  /* asymptotic amplitudes */
-  Complex Bin()    { return b_inc; }
-  Complex Btrans() { return b_trans; }
-  Complex Ctrans() { return c_trans; }
+  void CalcRFields(const Real rad, const int DoH); /*!< set the point at which the fields are calculated */
 
-  /* set the point at which the fields are calculated */
-  void CalcRFields(const Real rad, const int DoH);
+  Complex TeukRin()       { return rteuk_in; } /*!< value of the homogeneous solutions */
+  Complex TeukRup()     { return rteuk_up; } /*!< value of the homogeneous solutions */
+  Complex dr_TeukRin()    { return drteuk_in; } /*!< value of the homogeneous solutions */
+  Complex dr_TeukRup()  { return drteuk_up; } /*!< value of the homogeneous solutions */
+  Complex ddr_TeukRin()   { return ddrteuk_in; } /*!< value of the homogeneous solutions */
+  Complex ddr_TeukRup() { return ddrteuk_up; } /*!< value of the homogeneous solutions */
 
-  /* values of the homogeneous solutions */
-  Complex TeukRin()       { return rteuk_in; }
-  Complex TeukRup()     { return rteuk_up; }
-  Complex dr_TeukRin()    { return drteuk_in; }
-  Complex dr_TeukRup()  { return drteuk_up; }
-  Complex ddr_TeukRin()   { return ddrteuk_in; }
-  Complex ddr_TeukRup() { return ddrteuk_up; }
+  Real Accuracy_in()   { return accuracy_in; } /*!< the actual error bound */
+  Real Accuracy_up() { return accuracy_up; } /*!< the actual error bound */
 
-  /* the actual error bound */
-  Real Accuracy_in()   { return accuracy_in; }
-  Real Accuracy_up() { return accuracy_up; }
-
-  /* requesting lower precision */
   Real request_precision_in  (const Real p) {
     Real tmp = rin_request_precision;
     rin_request_precision = Fmax(p,REAL_EPSILON);
     return tmp;
-  }
+  } /*!< requesting precision */
+
   Real request_precision_up(const Real p) {
     Real tmp = rup_request_precision;
     rup_request_precision = Fmax(p,REAL_EPSILON);
     return tmp;
-  }
-  Real request_precision_in  () { return rin_request_precision; }
-  Real request_precision_up() { return rup_request_precision; }
+  } /*!< requesting precision */
+  Real request_precision_in  () { return rin_request_precision; } /*!< requesting precision */
+  Real request_precision_up() { return rup_request_precision; } /*!< requesting precision */
 
   int terms_evaluated() {
     int tmp = hypergeom_terms;
@@ -68,31 +66,31 @@ public:
   void set_gmp(int flag);
   int get_gmp() { return gmp_on; }
 
-  /* some quantities in the Teukolsky equation */
+  
   inline Real K(const Real rad) {
     return((rad*rad + a*a)*omega - m*a);
-  }
+  } /*!< some quantities in the Teukolsky equation */
 
   inline Real dr_K(const Real rad) {
     return(2.*rad*omega);
-  }
+  } /*!< some quantities in the Teukolsky equation */
 
   inline Real ddr_K() {
     return(2.*omega);
-  }
+  } /*!< some quantities in the Teukolsky equation */
 
   inline Complex teuk_potential(const Real rad) {
     return - K(rad) / (rad*rad - 2*rad + a*a) * (K(rad) + 4*(rad-1)*I)
       + 8 * omega * rad * I + lambda;
-  }
+  } /*!< some quantities in the Teukolsky equation */
 
   inline Complex get_ddrteuk(const Real rad,
-			     const Complex rteuk, const Complex drteuk);
+			     const Complex rteuk, const Complex drteuk); /*!< some quantities in the Teukolsky equation */
 
   int choose_solvers(const Real low, const Real high,
 		     const Real *lowerrs, const Real *higherrs,
 		     const int isin, const int oldchoice,
-		     Real **locptr, int **choiceptr, const int *maxchoiceptr);
+		     Real **locptr, int **choiceptr, const int *maxchoiceptr); /*!< some quantities in the Teukolsky equation */
 
   void geterrs(const Real r, Real *errs, int isin);
 
@@ -142,7 +140,7 @@ public:
  */
 #define TERM_NOISE 1e-14
 
-/* evaluate the fraction with increasing n
+/*!< evaluate the fraction with increasing n
  * - a_0 / (b1 - a_1 / (... */
 Real     plusfrac(Real    nu, Real epsilon, Real q, int m, Real lambda,
 		  Real *term);

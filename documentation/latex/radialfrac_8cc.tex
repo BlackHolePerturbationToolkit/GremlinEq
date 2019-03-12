@@ -1,0 +1,103 @@
+\hypertarget{radialfrac_8cc}{}\doxysection{src/fujtag/radialfrac.cc File Reference}
+\label{radialfrac_8cc}\index{src/fujtag/radialfrac.cc@{src/fujtag/radialfrac.cc}}
+{\ttfamily \#include \char`\"{}F\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}fraction\+\_\+macros.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{radialfrac_8cc_ae3b19e2ab6057e687f19861b227ef9f2}{R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+M\+O\+R\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}}~1
+\item 
+\#define \mbox{\hyperlink{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}{R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER}}~1e-\/30
+\item 
+\#define \mbox{\hyperlink{radialfrac_8cc_a8d72eb0366020839fe195fd9000f3f20}{M\+A\+K\+E\+\_\+\+F\+R\+A\+C\+\_\+\+F\+U\+N\+CS}}(type,  internal\+\_\+prefix,  prefix,  smalltest,  badtest,  absfunc,  badans)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_a87bb6a7dfc49c8be8dca5a8fd331dcfd}{M\+A\+K\+E\+\_\+\+F\+R\+A\+C\+\_\+\+F\+U\+N\+CS}} (\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}, \mbox{\hyperlink{radialfrac_8cc_a01e860997dda761b240fb216f1aa114b}{Long}},, \mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(a)$<$ \mbox{\hyperlink{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}{R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER}}, isnan(frac), \mbox{\hyperlink{teukolskydefs_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}, N\+AN) M\+A\+K\+E\+\_\+\+F\+R\+A\+C\+\_\+\+F\+U\+N\+CS(\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}{norm}} (a)$<$ \mbox{\hyperlink{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}{R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER}} $\ast$\mbox{\hyperlink{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}{R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER}}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_a9dc1157542ffb29fa4a6c880b897665e}{Cisnan}} (frac)
+\item 
+\mbox{\hyperlink{teukolskydefs_8h_a592199c23758c1280cc7318f1009619d}{C\+N\+AN}} \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{radialfrac_8cc_a8b8e35054d10d395561eb3a59bce3f05}{radialfrac\+\_\+half}} (\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} imnu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$term)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_a01e860997dda761b240fb216f1aa114b}{Long}}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_ae0323a9039add2978bf5b49550572c7c}{c}}
+\item 
+\mbox{\hyperlink{radialfrac_8cc_a676b0dba508a56547eb8d9eedca0705a}{abs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{radialfrac_8cc_a8d72eb0366020839fe195fd9000f3f20}\label{radialfrac_8cc_a8d72eb0366020839fe195fd9000f3f20}} 
+\index{radialfrac.cc@{radialfrac.cc}!MAKE\_FRAC\_FUNCS@{MAKE\_FRAC\_FUNCS}}
+\index{MAKE\_FRAC\_FUNCS@{MAKE\_FRAC\_FUNCS}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{MAKE\_FRAC\_FUNCS}{MAKE\_FRAC\_FUNCS}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+F\+R\+A\+C\+\_\+\+F\+U\+N\+CS(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{internal\+\_\+prefix,  }\item[{}]{prefix,  }\item[{}]{smalltest,  }\item[{}]{badtest,  }\item[{}]{absfunc,  }\item[{}]{badans }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{radialfrac_8cc_ae3b19e2ab6057e687f19861b227ef9f2}\label{radialfrac_8cc_ae3b19e2ab6057e687f19861b227ef9f2}} 
+\index{radialfrac.cc@{radialfrac.cc}!RADIALFRAC\_MORE\_PRECISION@{RADIALFRAC\_MORE\_PRECISION}}
+\index{RADIALFRAC\_MORE\_PRECISION@{RADIALFRAC\_MORE\_PRECISION}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{RADIALFRAC\_MORE\_PRECISION}{RADIALFRAC\_MORE\_PRECISION}}
+{\footnotesize\ttfamily \#define R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+M\+O\+R\+E\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON~1}
+
+\mbox{\Hypertarget{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}\label{radialfrac_8cc_aeace4b61eefe28caaaabf142aceb5c7c}} 
+\index{radialfrac.cc@{radialfrac.cc}!RADIALFRAC\_SMALLNUMBER@{RADIALFRAC\_SMALLNUMBER}}
+\index{RADIALFRAC\_SMALLNUMBER@{RADIALFRAC\_SMALLNUMBER}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{RADIALFRAC\_SMALLNUMBER}{RADIALFRAC\_SMALLNUMBER}}
+{\footnotesize\ttfamily \#define R\+A\+D\+I\+A\+L\+F\+R\+A\+C\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER~1e-\/30}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{radialfrac_8cc_a9dc1157542ffb29fa4a6c880b897665e}\label{radialfrac_8cc_a9dc1157542ffb29fa4a6c880b897665e}} 
+\index{radialfrac.cc@{radialfrac.cc}!Cisnan@{Cisnan}}
+\index{Cisnan@{Cisnan}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{Cisnan()}{Cisnan()}}
+{\footnotesize\ttfamily Cisnan (\begin{DoxyParamCaption}\item[{frac}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{radialfrac_8cc_a87bb6a7dfc49c8be8dca5a8fd331dcfd}\label{radialfrac_8cc_a87bb6a7dfc49c8be8dca5a8fd331dcfd}} 
+\index{radialfrac.cc@{radialfrac.cc}!MAKE\_FRAC\_FUNCS@{MAKE\_FRAC\_FUNCS}}
+\index{MAKE\_FRAC\_FUNCS@{MAKE\_FRAC\_FUNCS}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{MAKE\_FRAC\_FUNCS()}{MAKE\_FRAC\_FUNCS()}}
+{\footnotesize\ttfamily M\+A\+K\+E\+\_\+\+F\+R\+A\+C\+\_\+\+F\+U\+N\+CS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{,  }\item[{\mbox{\hyperlink{radialfrac_8cc_a01e860997dda761b240fb216f1aa114b}{Long}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}\label{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}} 
+\index{radialfrac.cc@{radialfrac.cc}!norm@{norm}}
+\index{norm@{norm}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily norm (\begin{DoxyParamCaption}\item[{a}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{radialfrac_8cc_a8b8e35054d10d395561eb3a59bce3f05}\label{radialfrac_8cc_a8b8e35054d10d395561eb3a59bce3f05}} 
+\index{radialfrac.cc@{radialfrac.cc}!radialfrac\_half@{radialfrac\_half}}
+\index{radialfrac\_half@{radialfrac\_half}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{radialfrac\_half()}{radialfrac\_half()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{teukolskydefs_8h_a592199c23758c1280cc7318f1009619d}{C\+N\+AN}} \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} radialfrac\+\_\+half (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{imnu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$}]{term }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{radialfrac_8cc_a676b0dba508a56547eb8d9eedca0705a}\label{radialfrac_8cc_a676b0dba508a56547eb8d9eedca0705a}} 
+\index{radialfrac.cc@{radialfrac.cc}!abs@{abs}}
+\index{abs@{abs}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{abs}{abs}}
+{\footnotesize\ttfamily abs}
+
+\mbox{\Hypertarget{radialfrac_8cc_ae0323a9039add2978bf5b49550572c7c}\label{radialfrac_8cc_ae0323a9039add2978bf5b49550572c7c}} 
+\index{radialfrac.cc@{radialfrac.cc}!c@{c}}
+\index{c@{c}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily c}
+
+\mbox{\Hypertarget{radialfrac_8cc_a01e860997dda761b240fb216f1aa114b}\label{radialfrac_8cc_a01e860997dda761b240fb216f1aa114b}} 
+\index{radialfrac.cc@{radialfrac.cc}!Long@{Long}}
+\index{Long@{Long}!radialfrac.cc@{radialfrac.cc}}
+\doxysubsubsection{\texorpdfstring{Long}{Long}}
+{\footnotesize\ttfamily Long}
+

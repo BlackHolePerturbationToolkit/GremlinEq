@@ -47,29 +47,23 @@ inline NUMBER Min(const NUMBER a, const NUMBER b) {
   return (a < b ? a : b);
 };
 
-//
-// Container for some useful global functions.
-//
+//! Kerr Quantities Class
+/*! This is a simple container class for a collection of useful simply static functions that pop up over and over again when studying Kerr black hole orbits. */
 class Kerr {
  public:
-  //
-  // r_+ = M + \sqrt{M^2 + a^2}; M \equiv 1
-  //
+  /*!> r_+ = M + \sqrt{M^2 + a^2}; M \equiv 1 */
   static Real rplus(const Real a)
     {
       return(1. + sqrt((1. - a)*(1. + a)));
-    };
-  //
-  // r_- = M - \sqrt{M^2 - a^2}
-  //
+    }; 
+
+  /*!> r_- = M - \sqrt{M^2 - a^2} */
   static Real rminus(const Real a)
     {
       return(1. - sqrt((1. - a)*(1. + a)));
     };
-  //
-  // r^* = r + 2 r_+/(r_+ - r_-) \ln{(r - r_+)/2M}
-  //         - 2 r_-/(r_+ - r_-) \ln{(r - r_-)/2M}
-  //
+
+  /*!> r^* = r + 2 r_+/(r_+ - r_-) \ln{(r - r_+)/2M} - 2 r_-/(r_+ - r_-) \ln{(r - r_-)/2M} */
   static Real rstar(const Real r, const Real a)
     {
       const Real rm = rminus(a);
@@ -78,48 +72,38 @@ class Kerr {
       return(r + ((2.*rp)/(rp - rm))*log((r - rp)/2.) -
 	     ((2.*rm)/(rp - rm))*log((r - rm)/2.));
     };
-  //
-  // \Delta  = r^2 - 2 M r + a^2
-  //
+
+  /*!> \Delta  = r^2 - 2 M r + a^2 */
   static Real Delta(const Real r, const Real a)
     {
       return(r*r - 2.*r + a*a);
     }
-  //
-  // d\Delta/dr  = 2 r - 2 M
-  //
+
+  /*!> d\Delta/dr  = 2 r - 2 M */
   static Real dr_Delta(const Real r)
     {
       return(2.*(r - 1.));
     }
-  //
-  // All right, so this one's kind of silly ...
-  //
-  // d^2\Delta/dr^2  = 2
-  //
+
+  /*!> All right, so this one's kind of silly ...d^2\Delta/dr^2  = 2 */
   static Real ddr_Delta()
     {
       return(2.);
     }
-  //
-  // \Sigma = r^2 + a^2 \cos^2\theta
-  //
+
+  /*!> \Sigma = r^2 + a^2 \cos^2\theta */
   static Real Sigma(const Real r, const Real a, const Real z)
     {
       return(r*r + a*a*z);
     };
-  //
-  // d\Sigma/dr = 2 r
-  //
+
+  /*!> d\Sigma/dr = 2 r */
   static Real dr_Sigma(const Real r)
     {
       return(2.*r);
     };
-  //
-  // All right, so this one's kind of silly too ...
-  //
-  // d^2\Sigma/dr^2 = 2
-  //
+
+  /*!> All right, so this one's kind of silly too ...d^2\Sigma/dr^2 = 2 */
   static Real ddr_Sigma()
     {
       return(2.);
@@ -193,9 +177,9 @@ class Kerr {
       return(3. + Z2 + sqrt((3. - Z1)*(3. + Z1 + 2.*Z2)));
     };
 };
-//
-// Holder for all the data we need to write out.
-//
+
+//! Data Holder Struct (deprecated March 2019)
+/*!> Holder for all the data we need to write out. (deprecated March 2019)*/
 struct DataHolder {
   int l, m, k;
   Real r, a, Lz, E, Q;

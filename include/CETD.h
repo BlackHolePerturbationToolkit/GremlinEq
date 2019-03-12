@@ -19,6 +19,22 @@
 #include "CEKR.h"
 #include "RRGW.h"
 
+//! Circular Equatorial Teukolsky Driver Class
+/*! A class which is used to “drive” studies that look at a many circular equatorial orbits. 
+It is essentially a holder for methods that solve CEKR repeatedly. This class is also used to write the HDF5 data files (the “d” stands for data as well as driver). 
+The synopsis is that the HDF5 file contains 2 groups: the 2 modes (i.e., the indices l and m) and the parameters (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Ωφ). 
+Into the modes group goes 19 different bits of data,
+* - The spin-weighted spheroidal harmonic eigenvalue λ
+* - The real and the imaginary parts of Z∞ (the amplitude of the “to infinity” Teukolsky amplitude)
+* - The real and the imaginary parts of ZH (the amplitude of the “down horizon” Teukolsky amplitude)
+* - The real and the imaginary parts of Rin (the ingoing separated radial part of the Teukolsky function, at the orbit)
+* - The real and the imaginary parts of ∂r(Rin)
+* - The real and the imaginary parts of Rup (the outgoing separated radial part of the Teukolsky function, at the orbit)
+* - The real and the imaginary parts of ∂r(Rup)
+* - 4 fluxes carried by the radiation, Edot∞, EdotH, Lzdot∞, LzdotH
+* - The rate of change of orbital radius arising from radiation flux to infinity, rdot∞
+* - The rate of change of orbital radius arising from the down-horizon radiation flux, rdotH
+*/
 class CETD {
 public:
   CETD(const int orbitsense, const Real rad, const Real spin, char outbase[]);

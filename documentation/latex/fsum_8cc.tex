@@ -1,0 +1,226 @@
+\hypertarget{fsum_8cc}{}\doxysection{src/fujtag/fsum.cc File Reference}
+\label{fsum_8cc}\index{src/fujtag/fsum.cc@{src/fujtag/fsum.cc}}
+{\ttfamily \#include \char`\"{}F\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fraction\+\_\+macros.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{C\+O\+E\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}~8
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_ac987125ef45426c4b50a540c975954f1}{L\+O\+O\+P\+\_\+\+C\+A\+N\+C\+E\+L\+\_\+\+T\+OL}}~1e-\/1
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_abd1787e3b45e2132876be3a02ce47064}{L\+O\+O\+P\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+U\+NT}}~10
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_a1174cdfd5f134281d6b0f0a208118c97}{L\+O\+O\+P\+\_\+\+M\+AX}}~1000
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_a29bcd946b5f6a9946c658ca56fc0c5fe}{K\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE}}~2
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_a8a69785ba1e812bd3f306266f925e0d3}{K\+\_\+\+C\+A\+C\+H\+E\+\_\+\+I\+N\+IT}}~\{ 0, 0 \}
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_ac769a2bef134c86292b71a526eb689a1}{L\+O\+O\+P\+\_\+\+P\+O\+S\+I\+T\+I\+VE}}(commands)
+\item 
+\#define \mbox{\hyperlink{fsum_8cc_ad46ff122cd55b1174b11402ddffacc22}{L\+O\+O\+P\+\_\+\+N\+E\+G\+A\+T\+I\+VE}}(commands)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_acdc9fda0d47325fecef92f9b0f4d3428}{asympt\+\_\+amps}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$b\+\_\+trans, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$b\+\_\+inc, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$b\+\_\+ref, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$c\+\_\+trans)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_aff9de7524bc0b17160ff0b1370ab7583}{fsum}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a443449c0a3d977da92a9c5d25ccbdbed}{kfactor}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_aae31a86ff9ee1694eece9ba050199884}{aminus}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a2b94f1e1407a8067a3554fc6bc4608e6}{rzero}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} x, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a484aa6e45c9efddc815164f804fa5af5}{rin\+\_\+hyper}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} x, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a987886f05e0ffd5a859660b6e719f7b3}{rcoulomb}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} z, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a700095a6c05ad09464a1df926bc96309}{rin\+\_\+coulomb}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} z, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a65e5b29513c93ef48cf02f3578e0cdbb}{rup\+\_\+tricomi}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} z, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} precision, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a2d0b0c8dbb7a7556598cca675183ee2e}{rin\+\_\+small}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} x, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} precision, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\item 
+\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{fsum_8cc_a01f9b741b6c006e5a8d707e4a2f16989}{rup\+\_\+hyper}} (\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} nu, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} x, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}, \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$deriv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}\label{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}} 
+\index{fsum.cc@{fsum.cc}!COEFFICIENT\_BLOCK\_SIZE@{COEFFICIENT\_BLOCK\_SIZE}}
+\index{COEFFICIENT\_BLOCK\_SIZE@{COEFFICIENT\_BLOCK\_SIZE}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{COEFFICIENT\_BLOCK\_SIZE}{COEFFICIENT\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define C\+O\+E\+F\+F\+I\+C\+I\+E\+N\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE~8}
+
+\mbox{\Hypertarget{fsum_8cc_a8a69785ba1e812bd3f306266f925e0d3}\label{fsum_8cc_a8a69785ba1e812bd3f306266f925e0d3}} 
+\index{fsum.cc@{fsum.cc}!K\_CACHE\_INIT@{K\_CACHE\_INIT}}
+\index{K\_CACHE\_INIT@{K\_CACHE\_INIT}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{K\_CACHE\_INIT}{K\_CACHE\_INIT}}
+{\footnotesize\ttfamily \#define K\+\_\+\+C\+A\+C\+H\+E\+\_\+\+I\+N\+IT~\{ 0, 0 \}}
+
+\mbox{\Hypertarget{fsum_8cc_a29bcd946b5f6a9946c658ca56fc0c5fe}\label{fsum_8cc_a29bcd946b5f6a9946c658ca56fc0c5fe}} 
+\index{fsum.cc@{fsum.cc}!K\_CACHE\_SIZE@{K\_CACHE\_SIZE}}
+\index{K\_CACHE\_SIZE@{K\_CACHE\_SIZE}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{K\_CACHE\_SIZE}{K\_CACHE\_SIZE}}
+{\footnotesize\ttfamily \#define K\+\_\+\+C\+A\+C\+H\+E\+\_\+\+S\+I\+ZE~2}
+
+\mbox{\Hypertarget{fsum_8cc_ac987125ef45426c4b50a540c975954f1}\label{fsum_8cc_ac987125ef45426c4b50a540c975954f1}} 
+\index{fsum.cc@{fsum.cc}!LOOP\_CANCEL\_TOL@{LOOP\_CANCEL\_TOL}}
+\index{LOOP\_CANCEL\_TOL@{LOOP\_CANCEL\_TOL}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{LOOP\_CANCEL\_TOL}{LOOP\_CANCEL\_TOL}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+C\+A\+N\+C\+E\+L\+\_\+\+T\+OL~1e-\/1}
+
+\mbox{\Hypertarget{fsum_8cc_a1174cdfd5f134281d6b0f0a208118c97}\label{fsum_8cc_a1174cdfd5f134281d6b0f0a208118c97}} 
+\index{fsum.cc@{fsum.cc}!LOOP\_MAX@{LOOP\_MAX}}
+\index{LOOP\_MAX@{LOOP\_MAX}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{LOOP\_MAX}{LOOP\_MAX}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+M\+AX~1000}
+
+\mbox{\Hypertarget{fsum_8cc_ad46ff122cd55b1174b11402ddffacc22}\label{fsum_8cc_ad46ff122cd55b1174b11402ddffacc22}} 
+\index{fsum.cc@{fsum.cc}!LOOP\_NEGATIVE@{LOOP\_NEGATIVE}}
+\index{LOOP\_NEGATIVE@{LOOP\_NEGATIVE}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{LOOP\_NEGATIVE}{LOOP\_NEGATIVE}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+N\+E\+G\+A\+T\+I\+VE(\begin{DoxyParamCaption}\item[{}]{commands }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                  \(\backslash\)}
+\DoxyCodeLine{    lastn = 0;                \(\backslash\)}
+\DoxyCodeLine{    int stattimes = 0;              \(\backslash\)}
+\DoxyCodeLine{    for(;;) \{               \(\backslash\)}
+\DoxyCodeLine{      fracs[\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}-\/1] =         \(\backslash\)}
+\DoxyCodeLine{  cminusfrac(lastn-\/\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}+1+nu,     \(\backslash\)}
+\DoxyCodeLine{       epsilon, q, m, lambda, NULL);      \(\backslash\)}
+\DoxyCodeLine{      for(n=\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}-\/2;n>=0;n-\/-\/) \{      \(\backslash\)}
+\DoxyCodeLine{  Complex LOOP\_denom = \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(lastn-\/n-\/1) + fracs[n+1];    \(\backslash\)}
+\DoxyCodeLine{  if(\mbox{\hyperlink{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}{norm}}(LOOP\_denom) >           \(\backslash\)}
+\DoxyCodeLine{     \mbox{\hyperlink{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}{norm}}(fracs[n+1])*(\mbox{\hyperlink{fsum_8cc_ac987125ef45426c4b50a540c975954f1}{LOOP\_CANCEL\_TOL}}*\mbox{\hyperlink{fsum_8cc_ac987125ef45426c4b50a540c975954f1}{LOOP\_CANCEL\_TOL}})) \{  \(\backslash\)}
+\DoxyCodeLine{    fracs[n] = -\/ \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(lastn-\/n-\/1) / LOOP\_denom;    \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{else} \{              \(\backslash\)}
+\DoxyCodeLine{    fracs[n] = \mbox{\hyperlink{fractions_8h_a55a6a86626fea9eef4e62ac669a989f8}{cminusfrac}}(lastn-\/n+nu, epsilon, q, m, lambda, NULL); \(\backslash\)}
+\DoxyCodeLine{  \}               \(\backslash\)}
+\DoxyCodeLine{      \}                 \(\backslash\)}
+\DoxyCodeLine{                        \(\backslash\)}
+\DoxyCodeLine{      for(n=0;n<\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}};n++,lastn-\/-\/) \{     \(\backslash\)}
+\DoxyCodeLine{  lastcoeff *= fracs[n]/\mbox{\hyperlink{fraction__macros_8h_afa648944585b238d9d996f881630ef30}{gamma}}(lastn);        \(\backslash\)}
+\DoxyCodeLine{  commands;             \(\backslash\)}
+\DoxyCodeLine{      \}                 \(\backslash\)}
+\DoxyCodeLine{      if(lastn < -\/\mbox{\hyperlink{fsum_8cc_a1174cdfd5f134281d6b0f0a208118c97}{LOOP\_MAX}})           \(\backslash\)}
+\DoxyCodeLine{  return NAN;             \(\backslash\)}
+\DoxyCodeLine{    \}                 \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fsum_8cc_ac769a2bef134c86292b71a526eb689a1}\label{fsum_8cc_ac769a2bef134c86292b71a526eb689a1}} 
+\index{fsum.cc@{fsum.cc}!LOOP\_POSITIVE@{LOOP\_POSITIVE}}
+\index{LOOP\_POSITIVE@{LOOP\_POSITIVE}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{LOOP\_POSITIVE}{LOOP\_POSITIVE}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+P\+O\+S\+I\+T\+I\+VE(\begin{DoxyParamCaption}\item[{}]{commands }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                  \(\backslash\)}
+\DoxyCodeLine{    lastn = 0;                \(\backslash\)}
+\DoxyCodeLine{    int stattimes = 0;              \(\backslash\)}
+\DoxyCodeLine{    for(;;) \{               \(\backslash\)}
+\DoxyCodeLine{      fracs[\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}-\/1] =         \(\backslash\)}
+\DoxyCodeLine{  cplusfrac(lastn+\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}-\/1+nu,      \(\backslash\)}
+\DoxyCodeLine{      epsilon, q, m, lambda, NULL);       \(\backslash\)}
+\DoxyCodeLine{      for(n=\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}}-\/2;n>=0;n-\/-\/) \{      \(\backslash\)}
+\DoxyCodeLine{  Complex LOOP\_denom = \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(lastn+n+1) + fracs[n+1];    \(\backslash\)}
+\DoxyCodeLine{  if(\mbox{\hyperlink{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}{norm}}(LOOP\_denom) >           \(\backslash\)}
+\DoxyCodeLine{     \mbox{\hyperlink{radialfrac_8cc_a06d1cf2e0b04ddf3d89f68c98ed29551}{norm}}(fracs[n+1])*(\mbox{\hyperlink{fsum_8cc_ac987125ef45426c4b50a540c975954f1}{LOOP\_CANCEL\_TOL}}*\mbox{\hyperlink{fsum_8cc_ac987125ef45426c4b50a540c975954f1}{LOOP\_CANCEL\_TOL}})) \{  \(\backslash\)}
+\DoxyCodeLine{    fracs[n] = -\/ \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(lastn+n) / LOOP\_denom;    \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{else} \{              \(\backslash\)}
+\DoxyCodeLine{    fracs[n] = \mbox{\hyperlink{fractions_8h_a92762381a449ba54742068cbd48328a2}{cplusfrac}}(lastn+n+nu, epsilon, q, m, lambda, NULL); \(\backslash\)}
+\DoxyCodeLine{  \}               \(\backslash\)}
+\DoxyCodeLine{      \}                 \(\backslash\)}
+\DoxyCodeLine{                        \(\backslash\)}
+\DoxyCodeLine{      for(n=0;n<\mbox{\hyperlink{fsum_8cc_a3545b33aa380a1efedcba0ace1202ba3}{COEFFICIENT\_BLOCK\_SIZE}};n++,lastn++) \{     \(\backslash\)}
+\DoxyCodeLine{  lastcoeff *= fracs[n]/\mbox{\hyperlink{fraction__macros_8h_a0789702602c256eae58b8532792e9582}{alpha}}(lastn);        \(\backslash\)}
+\DoxyCodeLine{  commands;             \(\backslash\)}
+\DoxyCodeLine{      \}                 \(\backslash\)}
+\DoxyCodeLine{      if(lastn > \mbox{\hyperlink{fsum_8cc_a1174cdfd5f134281d6b0f0a208118c97}{LOOP\_MAX}})            \(\backslash\)}
+\DoxyCodeLine{  return NAN;             \(\backslash\)}
+\DoxyCodeLine{    \}                 \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fsum_8cc_abd1787e3b45e2132876be3a02ce47064}\label{fsum_8cc_abd1787e3b45e2132876be3a02ce47064}} 
+\index{fsum.cc@{fsum.cc}!LOOP\_STAT\_COUNT@{LOOP\_STAT\_COUNT}}
+\index{LOOP\_STAT\_COUNT@{LOOP\_STAT\_COUNT}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{LOOP\_STAT\_COUNT}{LOOP\_STAT\_COUNT}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+S\+T\+A\+T\+\_\+\+C\+O\+U\+NT~10}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fsum_8cc_aae31a86ff9ee1694eece9ba050199884}\label{fsum_8cc_aae31a86ff9ee1694eece9ba050199884}} 
+\index{fsum.cc@{fsum.cc}!aminus@{aminus}}
+\index{aminus@{aminus}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{aminus()}{aminus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} aminus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_acdc9fda0d47325fecef92f9b0f4d3428}\label{fsum_8cc_acdc9fda0d47325fecef92f9b0f4d3428}} 
+\index{fsum.cc@{fsum.cc}!asympt\_amps@{asympt\_amps}}
+\index{asympt\_amps@{asympt\_amps}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{asympt\_amps()}{asympt\_amps()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} asympt\+\_\+amps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{b\+\_\+trans,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{b\+\_\+inc,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{b\+\_\+ref,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{c\+\_\+trans }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_aff9de7524bc0b17160ff0b1370ab7583}\label{fsum_8cc_aff9de7524bc0b17160ff0b1370ab7583}} 
+\index{fsum.cc@{fsum.cc}!fsum@{fsum}}
+\index{fsum@{fsum}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{fsum()}{fsum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} fsum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a443449c0a3d977da92a9c5d25ccbdbed}\label{fsum_8cc_a443449c0a3d977da92a9c5d25ccbdbed}} 
+\index{fsum.cc@{fsum.cc}!kfactor@{kfactor}}
+\index{kfactor@{kfactor}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{kfactor()}{kfactor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} kfactor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a987886f05e0ffd5a859660b6e719f7b3}\label{fsum_8cc_a987886f05e0ffd5a859660b6e719f7b3}} 
+\index{fsum.cc@{fsum.cc}!rcoulomb@{rcoulomb}}
+\index{rcoulomb@{rcoulomb}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rcoulomb()}{rcoulomb()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rcoulomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{z,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a700095a6c05ad09464a1df926bc96309}\label{fsum_8cc_a700095a6c05ad09464a1df926bc96309}} 
+\index{fsum.cc@{fsum.cc}!rin\_coulomb@{rin\_coulomb}}
+\index{rin\_coulomb@{rin\_coulomb}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rin\_coulomb()}{rin\_coulomb()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rin\+\_\+coulomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{z,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a484aa6e45c9efddc815164f804fa5af5}\label{fsum_8cc_a484aa6e45c9efddc815164f804fa5af5}} 
+\index{fsum.cc@{fsum.cc}!rin\_hyper@{rin\_hyper}}
+\index{rin\_hyper@{rin\_hyper}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rin\_hyper()}{rin\_hyper()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rin\+\_\+hyper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{x,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a2d0b0c8dbb7a7556598cca675183ee2e}\label{fsum_8cc_a2d0b0c8dbb7a7556598cca675183ee2e}} 
+\index{fsum.cc@{fsum.cc}!rin\_small@{rin\_small}}
+\index{rin\_small@{rin\_small}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rin\_small()}{rin\_small()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rin\+\_\+small (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{x,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{precision,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a01f9b741b6c006e5a8d707e4a2f16989}\label{fsum_8cc_a01f9b741b6c006e5a8d707e4a2f16989}} 
+\index{fsum.cc@{fsum.cc}!rup\_hyper@{rup\_hyper}}
+\index{rup\_hyper@{rup\_hyper}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rup\_hyper()}{rup\_hyper()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rup\+\_\+hyper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{x,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a65e5b29513c93ef48cf02f3578e0cdbb}\label{fsum_8cc_a65e5b29513c93ef48cf02f3578e0cdbb}} 
+\index{fsum.cc@{fsum.cc}!rup\_tricomi@{rup\_tricomi}}
+\index{rup\_tricomi@{rup\_tricomi}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rup\_tricomi()}{rup\_tricomi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rup\+\_\+tricomi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{z,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{precision,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fsum_8cc_a2b94f1e1407a8067a3554fc6bc4608e6}\label{fsum_8cc_a2b94f1e1407a8067a3554fc6bc4608e6}} 
+\index{fsum.cc@{fsum.cc}!rzero@{rzero}}
+\index{rzero@{rzero}!fsum.cc@{fsum.cc}}
+\doxysubsubsection{\texorpdfstring{rzero()}{rzero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} rzero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}}}]{nu,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{x,  }\item[{\mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} $\ast$}]{deriv }\end{DoxyParamCaption})}
+

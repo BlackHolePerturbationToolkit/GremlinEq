@@ -25,6 +25,8 @@
 #define MAXCOFS 1000
 #define CHEBCOFS 256
 
+//! Clebsch-Gordan Coefficients Class
+/*! Defines methods for computing and manipulating Clebsch-Gordan coefficients */
 class Clebsch {
 public:
   Real xbrac(const int s, const int q, const int p, const int m);
@@ -32,8 +34,10 @@ public:
   //
   // <s,p,m|sin(theta)|s,q,mp>
   //
+
+  /*! Computes <s,p,m|sin(theta)|s,q,mp> */ 
   Real sinthetabrac(const int s, const int p, const int q, const int m,
-		    const int mp);
+		    const int mp); 
 
 private:
   Real cgcof(const int j1, const int j2, const int m1, const int m2,
@@ -46,8 +50,14 @@ private:
 // for details.
 //
 
+//! Spin-Weighted Spheroidal Harmonics Class
+/*! Contains all the routines that do things with spin-weighted spheroidal harmonics */
 class SWSH {
 public:
+  //! A constructor for the SWSH Class.
+  /*!
+      Initialized with (s,l,m,spheroidicity)
+  */
   SWSH(const int ss, const int ll, const int mm, const Real spintimesfreq);
 
   void expand(Real *E, Real *b, int *n);

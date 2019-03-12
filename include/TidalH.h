@@ -18,7 +18,8 @@
 #define mRq_IGRND 1
 #define mD_C_IGRND 2
 #define mD_D_IGRND 3
-
+//! Tidal Horizon Class
+/*! This class defines functions which are useful for analyzing how the on-horizon Teukolsky solution affects the geometry of a black hole. This methods were extensively used in work with former MIT student Stephen O’Sullivan, but may not be of broad interest; as such, they may be removed from general release. */
 class TidalH {
 public:
   TidalH(const Real spin, const int ellmax);

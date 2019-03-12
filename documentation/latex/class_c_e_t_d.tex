@@ -1,0 +1,106 @@
+\hypertarget{class_c_e_t_d}{}\doxysection{C\+E\+TD Class Reference}
+\label{class_c_e_t_d}\index{CETD@{CETD}}
+
+
+Circular Equatorial Teukolsky Driver Class.  
+
+
+
+
+{\ttfamily \#include $<$C\+E\+T\+D.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a7d91e431d1808f36f2bc87f728abd190}\label{class_c_e_t_d_a7d91e431d1808f36f2bc87f728abd190}} 
+{\bfseries C\+E\+TD} (const int orbitsense, const Real rad, const Real spin, char outbase\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a02ad31dd0dbd7aa88520642a3961223d}\label{class_c_e_t_d_a02ad31dd0dbd7aa88520642a3961223d}} 
+void {\bfseries Driver} (const int lmax)
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ae0131d31dbc8722b57f3096ef180ee5e}\label{class_c_e_t_d_ae0131d31dbc8722b57f3096ef180ee5e}} 
+void {\bfseries Driver} (const Real E\+P\+S\+\_\+L, const int lmax\+\_\+min)
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ae4cc4630b5b2752906d7c82d9df9f1fb}\label{class_c_e_t_d_ae4cc4630b5b2752906d7c82d9df9f1fb}} 
+void {\bfseries Driver} (const Real E\+P\+S\+\_\+L, const int lmax, const int lmax\+\_\+min)
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a22d132a49454d164f6ba77485afdbfd2}\label{class_c_e_t_d_a22d132a49454d164f6ba77485afdbfd2}} 
+void {\bfseries Do\+Harmonic} (const int l, const int m)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a2006aec99c66c1d8423031a0bccdecd2}\label{class_c_e_t_d_a2006aec99c66c1d8423031a0bccdecd2}} 
+char {\bfseries outname} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ae3e704c407cff88378b11f3d1ad2795f}\label{class_c_e_t_d_ae3e704c407cff88378b11f3d1ad2795f}} 
+hid\+\_\+t {\bfseries hdffile}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ab0578bb3868246ce8da446a040b85a48}\label{class_c_e_t_d_ab0578bb3868246ce8da446a040b85a48}} 
+\mbox{\hyperlink{class_r_r_g_w}{R\+R\+GW}} $\ast$ {\bfseries rrgw}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_aac2eeb783f50df25e0b9119a0932cd00}\label{class_c_e_t_d_aac2eeb783f50df25e0b9119a0932cd00}} 
+\mbox{\hyperlink{class_c_e_k_g}{C\+E\+KG}} $\ast$ {\bfseries cekg}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a6c6bbf9b1d30de62bab9d50d817fcfdf}\label{class_c_e_t_d_a6c6bbf9b1d30de62bab9d50d817fcfdf}} 
+int {\bfseries proret}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a1054924df3320c307bd12371428ba21a}\label{class_c_e_t_d_a1054924df3320c307bd12371428ba21a}} 
+int {\bfseries l}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a89289d7af842c246a8d6b1b3762b0d53}\label{class_c_e_t_d_a89289d7af842c246a8d6b1b3762b0d53}} 
+int {\bfseries m}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a9f9709433ec94111764e06b8e2ff3f1e}\label{class_c_e_t_d_a9f9709433ec94111764e06b8e2ff3f1e}} 
+Real {\bfseries r}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_aca590077de48b6c414de1b57282a39fc}\label{class_c_e_t_d_aca590077de48b6c414de1b57282a39fc}} 
+Real {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ab4c382a79ed9a8ea437583546fa66a57}\label{class_c_e_t_d_ab4c382a79ed9a8ea437583546fa66a57}} 
+int {\bfseries lmin}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a377a85df88713bc826de974295a64e80}\label{class_c_e_t_d_a377a85df88713bc826de974295a64e80}} 
+int {\bfseries lmax}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a87c344a4f0ea53f363cc39d53af4635e}\label{class_c_e_t_d_a87c344a4f0ea53f363cc39d53af4635e}} 
+int {\bfseries mmin}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a4678299983391d418427b210eff83b5b}\label{class_c_e_t_d_a4678299983391d418427b210eff83b5b}} 
+int {\bfseries mmax}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_ab1b6d5acfff8a388bc1d30ca87f6561a}\label{class_c_e_t_d_ab1b6d5acfff8a388bc1d30ca87f6561a}} 
+Real {\bfseries EdotH}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_aa67049d1fd53b4ea47dbdad0a8ce1b8a}\label{class_c_e_t_d_aa67049d1fd53b4ea47dbdad0a8ce1b8a}} 
+Real {\bfseries EdotI}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a8be5ecefd635ebe9a9ef6bbc5f44f74d}\label{class_c_e_t_d_a8be5ecefd635ebe9a9ef6bbc5f44f74d}} 
+Complex {\bfseries ZH}
+\item 
+\mbox{\Hypertarget{class_c_e_t_d_a835505a6e3e8aec036ffa560098a9c97}\label{class_c_e_t_d_a835505a6e3e8aec036ffa560098a9c97}} 
+Complex {\bfseries ZI}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Circular Equatorial Teukolsky Driver Class. 
+
+A class which is used to “drive” studies that look at a many circular equatorial orbits. It is essentially a holder for methods that solve \mbox{\hyperlink{class_c_e_k_r}{C\+E\+KR}} repeatedly. This class is also used to write the H\+D\+F5 data files (the “d” stands for data as well as driver). The synopsis is that the H\+D\+F5 file contains 2 groups\+: the 2 modes (i.\+e., the indices l and m) and the parameters (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Ωφ). Into the modes group goes 19 different bits of data,
+\begin{DoxyItemize}
+\item The spin-\/weighted spheroidal harmonic eigenvalue λ
+\item The real and the imaginary parts of Z∞ (the amplitude of the “to infinity” Teukolsky amplitude)
+\item The real and the imaginary parts of ZH (the amplitude of the “down horizon” Teukolsky amplitude)
+\item The real and the imaginary parts of Rin (the ingoing separated radial part of the Teukolsky function, at the orbit)
+\item The real and the imaginary parts of ∂r(\+Rin)
+\item The real and the imaginary parts of Rup (the outgoing separated radial part of the Teukolsky function, at the orbit)
+\item The real and the imaginary parts of ∂r(\+Rup)
+\item 4 fluxes carried by the radiation, Edot∞, EdotH, Lzdot∞, LzdotH
+\item The rate of change of orbital radius arising from radiation flux to infinity, rdot∞
+\item The rate of change of orbital radius arising from the down-\/horizon radiation flux, rdotH 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/C\+E\+T\+D.\+h\item 
+src/circeq/C\+E\+T\+D.\+cc\end{DoxyCompactItemize}

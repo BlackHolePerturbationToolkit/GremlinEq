@@ -1,0 +1,67 @@
+\hypertarget{hypergeom_8cc}{}\doxysection{src/fujtag/hypergeom.cc File Reference}
+\label{hypergeom_8cc}\index{src/fujtag/hypergeom.cc@{src/fujtag/hypergeom.cc}}
+{\ttfamily \#include \char`\"{}F\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cfloat$>$}\newline
+{\ttfamily \#include \char`\"{}complex\+\_\+ops.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hypergeom_8cc_a919a9c7f627c2c0d9740dfabc1da872d}{hpmax}}(a,  b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::complex$<$ \mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}} $>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{hypergeom_8cc_aae693cd64b0fb4139a70764f55ca019f}{hypergeom2\+F1}} (std\+::complex$<$ double $>$ n1, std\+::complex$<$ double $>$ n2, std\+::complex$<$ double $>$ d1, std\+::complex$<$ double $>$ x)
+\item 
+std\+::complex$<$ \mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}} $>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{hypergeom_8cc_a9de191d3379fb6c96b7e26b71bcce1d8}{hypergeom1\+F1}} (std\+::complex$<$ double $>$ n1, std\+::complex$<$ double $>$ d1, std\+::complex$<$ double $>$ x)
+\item 
+std\+::complex$<$ \mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}} $>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{hypergeom_8cc_a9f282ef33b72a182260667b67d905b7b}{hypergeomU}} (std\+::complex$<$ double $>$ a, std\+::complex$<$ double $>$ b, std\+::complex$<$ double $>$ x)
+\item 
+std\+::complex$<$ \mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}} $>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{hypergeom_8cc_a24b07351783a59dd8a18ef5f6cc7dd00}{hypergeom\+U\+\_\+reduced}} (std\+::complex$<$ double $>$ a, std\+::complex$<$ double $>$ b, std\+::complex$<$ double $>$ x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hypergeom_8cc_a919a9c7f627c2c0d9740dfabc1da872d}\label{hypergeom_8cc_a919a9c7f627c2c0d9740dfabc1da872d}} 
+\index{hypergeom.cc@{hypergeom.cc}!hpmax@{hpmax}}
+\index{hpmax@{hpmax}!hypergeom.cc@{hypergeom.cc}}
+\doxysubsubsection{\texorpdfstring{hpmax}{hpmax}}
+{\footnotesize\ttfamily \#define hpmax(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\{            \(\backslash\)}
+\DoxyCodeLine{    typeof(a) \_a = (a);       \(\backslash\)}
+\DoxyCodeLine{    typeof(b) \_b = (b);       \(\backslash\)}
+\DoxyCodeLine{    \_a > \_b ? \_a : \_b;        \(\backslash\)}
+\DoxyCodeLine{  \})}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hypergeom_8cc_a9de191d3379fb6c96b7e26b71bcce1d8}\label{hypergeom_8cc_a9de191d3379fb6c96b7e26b71bcce1d8}} 
+\index{hypergeom.cc@{hypergeom.cc}!hypergeom1F1@{hypergeom1F1}}
+\index{hypergeom1F1@{hypergeom1F1}!hypergeom.cc@{hypergeom.cc}}
+\doxysubsubsection{\texorpdfstring{hypergeom1F1()}{hypergeom1F1()}}
+{\footnotesize\ttfamily std\+::complex$<$\mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}}$>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} hypergeom1\+F1 (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{n1,  }\item[{std\+::complex$<$ double $>$}]{d1,  }\item[{std\+::complex$<$ double $>$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hypergeom_8cc_aae693cd64b0fb4139a70764f55ca019f}\label{hypergeom_8cc_aae693cd64b0fb4139a70764f55ca019f}} 
+\index{hypergeom.cc@{hypergeom.cc}!hypergeom2F1@{hypergeom2F1}}
+\index{hypergeom2F1@{hypergeom2F1}!hypergeom.cc@{hypergeom.cc}}
+\doxysubsubsection{\texorpdfstring{hypergeom2F1()}{hypergeom2F1()}}
+{\footnotesize\ttfamily std\+::complex$<$\mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}}$>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} hypergeom2\+F1 (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{n1,  }\item[{std\+::complex$<$ double $>$}]{n2,  }\item[{std\+::complex$<$ double $>$}]{d1,  }\item[{std\+::complex$<$ double $>$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hypergeom_8cc_a9f282ef33b72a182260667b67d905b7b}\label{hypergeom_8cc_a9f282ef33b72a182260667b67d905b7b}} 
+\index{hypergeom.cc@{hypergeom.cc}!hypergeomU@{hypergeomU}}
+\index{hypergeomU@{hypergeomU}!hypergeom.cc@{hypergeom.cc}}
+\doxysubsubsection{\texorpdfstring{hypergeomU()}{hypergeomU()}}
+{\footnotesize\ttfamily std\+::complex$<$\mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}}$>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} hypergeomU (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{a,  }\item[{std\+::complex$<$ double $>$}]{b,  }\item[{std\+::complex$<$ double $>$}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hypergeom_8cc_a24b07351783a59dd8a18ef5f6cc7dd00}\label{hypergeom_8cc_a24b07351783a59dd8a18ef5f6cc7dd00}} 
+\index{hypergeom.cc@{hypergeom.cc}!hypergeomU\_reduced@{hypergeomU\_reduced}}
+\index{hypergeomU\_reduced@{hypergeomU\_reduced}!hypergeom.cc@{hypergeom.cc}}
+\doxysubsubsection{\texorpdfstring{hypergeomU\_reduced()}{hypergeomU\_reduced()}}
+{\footnotesize\ttfamily std\+::complex$<$\mbox{\hyperlink{_f_t_8h_a4ce87cec17fc9aab396db759ad7f771f}{H\+Y\+P\+E\+R\+G\+E\+O\+M\+\_\+\+R\+E\+A\+L\+\_\+\+T\+Y\+PE}}$>$ \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} hypergeom\+U\+\_\+reduced (\begin{DoxyParamCaption}\item[{std\+::complex$<$ double $>$}]{a,  }\item[{std\+::complex$<$ double $>$}]{b,  }\item[{std\+::complex$<$ double $>$}]{x }\end{DoxyParamCaption})}
+

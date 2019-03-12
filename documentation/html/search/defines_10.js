@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['radialfrac_5fh_5fseen',['RADIALFRAC_H_SEEN',['../_f_t_8h.html#a006d7d308a4c7765c190191cbaf9b68c',1,'FT.h']]],
+  ['radialfrac_5fmore_5fprecision',['RADIALFRAC_MORE_PRECISION',['../radialfrac_8cc.html#ae3b19e2ab6057e687f19861b227ef9f2',1,'radialfrac.cc']]],
+  ['radialfrac_5fsmallnumber',['RADIALFRAC_SMALLNUMBER',['../radialfrac_8cc.html#aeace4b61eefe28caaaabf142aceb5c7c',1,'radialfrac.cc']]],
+  ['real_5fepsilon',['REAL_EPSILON',['../_f_t_8h.html#a268bd688a4b5c8bb1c12bfdb92e27a1d',1,'REAL_EPSILON():&#160;FT.h'],['../teukolskydefs_8h.html#a268bd688a4b5c8bb1c12bfdb92e27a1d',1,'REAL_EPSILON():&#160;teukolskydefs.h']]],
+  ['real_5fmant_5fdig',['REAL_MANT_DIG',['../_f_t_8h.html#a78ce812eb37bcc49f0fd24432b39a4f0',1,'REAL_MANT_DIG():&#160;FT.h'],['../teukolskydefs_8h.html#a78ce812eb37bcc49f0fd24432b39a4f0',1,'REAL_MANT_DIG():&#160;teukolskydefs.h']]],
+  ['real_5ftype',['REAL_TYPE',['../teukolskydefs_8h.html#a7db5e8ee7c27e6fb5c9caf9d674ea949',1,'teukolskydefs.h']]],
+  ['renangmom_5fdetect_5flimit',['RENANGMOM_DETECT_LIMIT',['../renangmom_8cc.html#a18e538c9894d6dc2eabda26b63f45346',1,'renangmom.cc']]],
+  ['renangmom_5fh_5fseen',['RENANGMOM_H_SEEN',['../fractions_8h.html#a7bc9660d9e840e51794e4e3b695e0b57',1,'RENANGMOM_H_SEEN():&#160;fractions.h'],['../_f_t_8h.html#a7bc9660d9e840e51794e4e3b695e0b57',1,'RENANGMOM_H_SEEN():&#160;FT.h']]],
+  ['renangmom_5fiint_5fdetect_5fattempt',['RENANGMOM_IINT_DETECT_ATTEMPT',['../renangmom_8cc.html#acf0f4e0bc2dc48865291d7363af07b2d',1,'renangmom.cc']]],
+  ['renangmom_5fiint_5fmax_5fdivisions',['RENANGMOM_IINT_MAX_DIVISIONS',['../renangmom_8cc.html#ab8b5964518ce45a8f0deb9b641a7327b',1,'renangmom.cc']]],
+  ['renangmom_5fmax_5fdist',['RENANGMOM_MAX_DIST',['../renangmom_8cc.html#a74939d8df7ad9debb6bca6ce56670227',1,'renangmom.cc']]],
+  ['renangmom_5fprecision',['RENANGMOM_PRECISION',['../renangmom_8cc.html#af127172668c90b811568096afd4ff0b1',1,'renangmom.cc']]],
+  ['renangmom_5freal_5fdetect_5fattempt',['RENANGMOM_REAL_DETECT_ATTEMPT',['../renangmom_8cc.html#a67c38ff82966846ec9804e567bad42d8',1,'renangmom.cc']]],
+  ['renangmom_5fsecant_5fmax_5fsteps',['RENANGMOM_SECANT_MAX_STEPS',['../renangmom_8cc.html#a0ca08c4cc6ebbdfdde61a3a76d55d1bc',1,'renangmom.cc']]],
+  ['renangmom_5fsecant_5fmin_5frel_5fstep',['RENANGMOM_SECANT_MIN_REL_STEP',['../renangmom_8cc.html#a4dabce364b6a9a0ad05c5faa199e8bd6',1,'renangmom.cc']]],
+  ['renangmom_5fskeptic_5frepeat_5fspacing',['RENANGMOM_SKEPTIC_REPEAT_SPACING',['../renangmom_8cc.html#a5d6dd004c021f46651151f2216c3cba3',1,'renangmom.cc']]],
+  ['retrograde',['RETROGRADE',['../_c_e_k_g_8h.html#a3dcdc6f3e83b1b5e985d3455a6d0b55b',1,'CEKG.h']]]
+];

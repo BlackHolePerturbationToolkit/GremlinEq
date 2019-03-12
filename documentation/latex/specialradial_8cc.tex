@@ -1,0 +1,365 @@
+\hypertarget{specialradial_8cc}{}\doxysection{src/fujtag/specialradial.cc File Reference}
+\label{specialradial_8cc}\index{src/fujtag/specialradial.cc@{src/fujtag/specialradial.cc}}
+{\ttfamily \#include \char`\"{}F\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a1e657eb32628b2e38ba320e75b5c8e07}{S\+P\+E\+C\+I\+A\+L\+R\+A\+D\+I\+A\+L\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER}}~1e-\/30
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}{D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA}}()~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macroa1,macroa2,macroa3
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}{D\+E\+C\+L\+A\+R\+E\+\_\+\+B\+E\+TA}}()~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macrob1
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}{dalphagamma}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+B\+E\+TA}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}{dbeta}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a80bffb1d22da62a2528468cbbc407c8d}{ddalphagamma1}}
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_adcbc53977f4eb6b7f6bad1a3b3565ceb}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+B\+E\+T\+A1}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_ad639901d07ef8ec8d3c4a9c00582fb70}{ddbeta1}}~(26.\+25 + 19$\ast$b\+\_\+add1 + 4$\ast$b\+\_\+add2)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_af90c48c2f20980b8ff5e17de82388f63}{G\+E\+T\+\_\+\+P\+A\+R\+T\+I\+AL}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}{D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}{D\+E\+C\+L\+A\+R\+E\+\_\+\+B\+E\+TA}}()~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macrob1
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a29599d106179302213397b661c8b402c}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+A\+L\+P\+H\+A\+G\+A\+M\+MA}}()~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macroda2,macroda3,macroda4,macroda5,macroda6
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}{dalphagamma}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+B\+E\+TA}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}{dbeta}}(n)
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a60a6f154aec127cb6371ed953c7c49ea}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+A\+L\+P\+H\+A\+G\+A\+M\+M\+A\+\_\+1}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a0c3c36690c99dcd3a96d3d1458025009}{ddalphagamma\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a6bbf7eed650dd0e7c9b01f86dc1a0ed4}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+A\+L\+P\+H\+A\+G\+A\+M\+M\+A\+\_\+2}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_af9766c05aba53fef3f85f9393d99fc88}{ddalphagamma\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_ac5a494348c9738db960b2683cead4372}{D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+B\+E\+T\+A\+\_\+1}}()
+\item 
+\#define \mbox{\hyperlink{specialradial_8cc_a4d3492361a7f76f8ab16c5cdd06c2e6e}{ddbeta\+\_\+1}}~(-\/3 + b\+\_\+add1 + 4$\ast$b\+\_\+add2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{specialradial_8cc_a9483469dc4e1ef29a6713a621aeaf928}{radial\+\_\+half\+\_\+value}} (\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$term)
+\item 
+\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} \mbox{\hyperlink{specialradial_8cc_a0a516a8b3b1b79bd0bd77d642ae705c2}{radial\+\_\+int\+\_\+slope}} (\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} epsilon, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} q, int m, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} lambda, \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$term)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}\label{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}} 
+\index{specialradial.cc@{specialradial.cc}!alphagamma@{alphagamma}}
+\index{alphagamma@{alphagamma}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{alphagamma}{alphagamma}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define alphagamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(macroa1 = (n)-\/1.5,             \(\backslash\)}
+\DoxyCodeLine{   macroa2 = (n)+2.5,             \(\backslash\)}
+\DoxyCodeLine{   macroa3 = (n)+0.5,             \(\backslash\)}
+\DoxyCodeLine{   (ag\_mult*((n)-\/0.5)*((n)+1.5)*((n)-\/1)*((n)+2)       \(\backslash\)}
+\DoxyCodeLine{    *(macroa1*macroa1 + epsilonsq)*(macroa2*macroa2 + epsilonsq)  \(\backslash\)}
+\DoxyCodeLine{    *(macroa3*macroa3 + tausq)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}\label{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}} 
+\index{specialradial.cc@{specialradial.cc}!alphagamma@{alphagamma}}
+\index{alphagamma@{alphagamma}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{alphagamma}{alphagamma}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define alphagamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(ag\_mult*((n)+1)*((n)+3)*((n)+0.5)*((n)+3.5)      \(\backslash\)}
+\DoxyCodeLine{   *((n)*(n) + epsilonsq)*(((n)+4)*((n)+4) + epsilonsq)   \(\backslash\)}
+\DoxyCodeLine{   *(((n)+2)*((n)+2) + tausq))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}\label{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}} 
+\index{specialradial.cc@{specialradial.cc}!beta@{beta}}
+\index{beta@{beta}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define beta(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(macrob1 = ((n)*(n)-\/0.25),          \(\backslash\)}
+\DoxyCodeLine{   (4*(macrob1*(macrob1 + b\_add1) + b\_add2)*((n)*(n) -\/ 1)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}\label{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}} 
+\index{specialradial.cc@{specialradial.cc}!beta@{beta}}
+\index{beta@{beta}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define beta(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(macrob1 = ((n) + 1)*((n) + 2),         \(\backslash\)}
+\DoxyCodeLine{   (4*(macrob1*(macrob1 + b\_add1) + b\_add2)*((n) + 2.5)*((n) + 0.5)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}\label{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}} 
+\index{specialradial.cc@{specialradial.cc}!dalphagamma@{dalphagamma}}
+\index{dalphagamma@{dalphagamma}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{dalphagamma}{dalphagamma}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define dalphagamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(2*ag\_mult*(2*((n) + 0.5)*((n)*((n) + 1) -\/ 1.375)*      \(\backslash\)}
+\DoxyCodeLine{        (((n) -\/ 1.5)*((n) -\/ 1.5) + epsilonsq)*      \(\backslash\)}
+\DoxyCodeLine{        (((n) + 2.5)*((n) + 2.5) + epsilonsq)*      \(\backslash\)}
+\DoxyCodeLine{        (((n) + 0.5)*((n) + 0.5) + tausq) +     \(\backslash\)}
+\DoxyCodeLine{        ((n) -\/ 0.5)*((n) + 1.5)*((n) -\/ 1)*((n) + 2)   \(\backslash\)}
+\DoxyCodeLine{        *(((n) -\/ 1.5)*(((n) + 2.5)*((n) + 2.5) + epsilonsq) \(\backslash\)}
+\DoxyCodeLine{    *(((n) + 0.5)*((n) + 0.5) + tausq) +      \(\backslash\)}
+\DoxyCodeLine{    (((n) -\/ 1.5)*((n) -\/ 1.5) + epsilonsq)*      \(\backslash\)}
+\DoxyCodeLine{    ((n) + 2.5)*(((n) + 0.5)*((n) + 0.5) + tausq) +   \(\backslash\)}
+\DoxyCodeLine{    (((n) -\/ 1.5)*((n) -\/ 1.5) + epsilonsq)*                  \(\backslash\)}
+\DoxyCodeLine{    (((n) + 2.5)*((n) + 2.5) + epsilonsq)*((n) + 0.5))))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}\label{specialradial_8cc_a3fa10370aae53d7dd445dbdcdb47081d}} 
+\index{specialradial.cc@{specialradial.cc}!dalphagamma@{dalphagamma}}
+\index{dalphagamma@{dalphagamma}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{dalphagamma}{dalphagamma}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define dalphagamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(macroda2 = (n)+4,              \(\backslash\)}
+\DoxyCodeLine{   macroda3 = (n)+2,              \(\backslash\)}
+\DoxyCodeLine{   macroda4 = (n)*(n) + epsilonsq,          \(\backslash\)}
+\DoxyCodeLine{   macroda5 = macroda2*macroda2 + epsilonsq,        \(\backslash\)}
+\DoxyCodeLine{   macroda6 = macroda3*macroda3 + tausq,        \(\backslash\)}
+\DoxyCodeLine{   2*ag\_mult*(2*macroda3*((n)*macroda2+2.375)*macroda4*macroda5*macroda6 + \(\backslash\)}
+\DoxyCodeLine{        ((n)+1)*((n)+3)*((n)+0.5)*((n)+3.5)     \(\backslash\)}
+\DoxyCodeLine{        *((n)*macroda5*macroda6 +         \(\backslash\)}
+\DoxyCodeLine{    macroda4*macroda2*macroda6 +        \(\backslash\)}
+\DoxyCodeLine{    macroda4*macroda5*macroda3)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}\label{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}} 
+\index{specialradial.cc@{specialradial.cc}!dbeta@{dbeta}}
+\index{dbeta@{dbeta}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{dbeta}{dbeta}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define dbeta(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(8*(n)*(3*((n)*(n)-\/0.75)*((n)*(n)-\/0.25) + \(\backslash\)}
+\DoxyCodeLine{    2*((n)*(n)-\/0.625)*b\_add1 + b\_add2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}\label{specialradial_8cc_a949f875230ba31fea2faf632d40df9a0}} 
+\index{specialradial.cc@{specialradial.cc}!dbeta@{dbeta}}
+\index{dbeta@{dbeta}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{dbeta}{dbeta}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define dbeta(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(8*((n)+1.5)*(3*((n)*((n)+3)+1.5)*((n)+1)*((n)+2) + \(\backslash\)}
+\DoxyCodeLine{    2*((n)*((n)+3)+1.625)*b\_add1 + b\_add2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a80bffb1d22da62a2528468cbbc407c8d}\label{specialradial_8cc_a80bffb1d22da62a2528468cbbc407c8d}} 
+\index{specialradial.cc@{specialradial.cc}!ddalphagamma1@{ddalphagamma1}}
+\index{ddalphagamma1@{ddalphagamma1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{ddalphagamma1}{ddalphagamma1}}
+{\footnotesize\ttfamily \#define ddalphagamma1}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0.25*ag\_mult*(41*(0.25 + epsilonsq)*                 \(\backslash\)}
+\DoxyCodeLine{(12.25 + epsilonsq)*(2.25 + tausq)      \(\backslash\)}
+\DoxyCodeLine{ + 15.*(-\/(12.25 + epsilonsq)*(2.25 + tausq)   \(\backslash\)}
+\DoxyCodeLine{       + 7.*(0.25 + epsilonsq)*(2.25 + tausq)   \(\backslash\)}
+\DoxyCodeLine{  + 3.*(0.25 + epsilonsq)*(12.25 + epsilonsq))))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a0c3c36690c99dcd3a96d3d1458025009}\label{specialradial_8cc_a0c3c36690c99dcd3a96d3d1458025009}} 
+\index{specialradial.cc@{specialradial.cc}!ddalphagamma\_1@{ddalphagamma\_1}}
+\index{ddalphagamma\_1@{ddalphagamma\_1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{ddalphagamma\_1}{ddalphagamma\_1}}
+{\footnotesize\ttfamily \#define ddalphagamma\+\_\+1}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0.25*ag\_mult*(11*(1+epsilonsq)*(1+epsilonsq)*(1+tausq) \(\backslash\)}
+\DoxyCodeLine{     + 48*(1+epsilonsq)*(1+tausq)     \(\backslash\)}
+\DoxyCodeLine{     -\/ 20*(1+epsilonsq)*(1+epsilonsq)   \(\backslash\)}
+\DoxyCodeLine{     +160*(tausq-\/epsilonsq)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_af9766c05aba53fef3f85f9393d99fc88}\label{specialradial_8cc_af9766c05aba53fef3f85f9393d99fc88}} 
+\index{specialradial.cc@{specialradial.cc}!ddalphagamma\_2@{ddalphagamma\_2}}
+\index{ddalphagamma\_2@{ddalphagamma\_2}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{ddalphagamma\_2}{ddalphagamma\_2}}
+{\footnotesize\ttfamily \#define ddalphagamma\+\_\+2}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0.25*ag\_mult*(9*(4+epsilonsq)*(4+epsilonsq)        \(\backslash\)}
+\DoxyCodeLine{     -\/ (epsilonsq*(13*epsilonsq + 86) + 280)*tausq))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_ad639901d07ef8ec8d3c4a9c00582fb70}\label{specialradial_8cc_ad639901d07ef8ec8d3c4a9c00582fb70}} 
+\index{specialradial.cc@{specialradial.cc}!ddbeta1@{ddbeta1}}
+\index{ddbeta1@{ddbeta1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{ddbeta1}{ddbeta1}}
+{\footnotesize\ttfamily \#define ddbeta1~(26.\+25 + 19$\ast$b\+\_\+add1 + 4$\ast$b\+\_\+add2)}
+
+\mbox{\Hypertarget{specialradial_8cc_a4d3492361a7f76f8ab16c5cdd06c2e6e}\label{specialradial_8cc_a4d3492361a7f76f8ab16c5cdd06c2e6e}} 
+\index{specialradial.cc@{specialradial.cc}!ddbeta\_1@{ddbeta\_1}}
+\index{ddbeta\_1@{ddbeta\_1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{ddbeta\_1}{ddbeta\_1}}
+{\footnotesize\ttfamily \#define ddbeta\+\_\+1~(-\/3 + b\+\_\+add1 + 4$\ast$b\+\_\+add2)}
+
+\mbox{\Hypertarget{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}\label{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_ALPHAGAMMA@{DECLARE\_ALPHAGAMMA}}
+\index{DECLARE\_ALPHAGAMMA@{DECLARE\_ALPHAGAMMA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_ALPHAGAMMA}{DECLARE\_ALPHAGAMMA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macroa1,macroa2,macroa3}
+
+\mbox{\Hypertarget{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}\label{specialradial_8cc_a30e4c3d596633bf39171366d59b53ae4}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_ALPHAGAMMA@{DECLARE\_ALPHAGAMMA}}
+\index{DECLARE\_ALPHAGAMMA@{DECLARE\_ALPHAGAMMA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_ALPHAGAMMA}{DECLARE\_ALPHAGAMMA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}\label{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_BETA@{DECLARE\_BETA}}
+\index{DECLARE\_BETA@{DECLARE\_BETA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_BETA}{DECLARE\_BETA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+B\+E\+TA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macrob1}
+
+\mbox{\Hypertarget{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}\label{specialradial_8cc_a8ae9d627990cf2d0ebcda0519fd69cdd}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_BETA@{DECLARE\_BETA}}
+\index{DECLARE\_BETA@{DECLARE\_BETA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_BETA}{DECLARE\_BETA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+B\+E\+TA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macrob1}
+
+\mbox{\Hypertarget{specialradial_8cc_a29599d106179302213397b661c8b402c}\label{specialradial_8cc_a29599d106179302213397b661c8b402c}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DALPHAGAMMA@{DECLARE\_DALPHAGAMMA}}
+\index{DECLARE\_DALPHAGAMMA@{DECLARE\_DALPHAGAMMA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DALPHAGAMMA}{DECLARE\_DALPHAGAMMA}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+A\+L\+P\+H\+A\+G\+A\+M\+MA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} macroda2,macroda3,macroda4,macroda5,macroda6}
+
+\mbox{\Hypertarget{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}\label{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DBETA@{DECLARE\_DBETA}}
+\index{DECLARE\_DBETA@{DECLARE\_DBETA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DBETA}{DECLARE\_DBETA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+B\+E\+TA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}\label{specialradial_8cc_a0da0cac18a76d59eafe17e342d96436c}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DBETA@{DECLARE\_DBETA}}
+\index{DECLARE\_DBETA@{DECLARE\_DBETA}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DBETA}{DECLARE\_DBETA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+B\+E\+TA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_a60a6f154aec127cb6371ed953c7c49ea}\label{specialradial_8cc_a60a6f154aec127cb6371ed953c7c49ea}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DDALPHAGAMMA\_1@{DECLARE\_DDALPHAGAMMA\_1}}
+\index{DECLARE\_DDALPHAGAMMA\_1@{DECLARE\_DDALPHAGAMMA\_1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DDALPHAGAMMA\_1}{DECLARE\_DDALPHAGAMMA\_1}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+A\+L\+P\+H\+A\+G\+A\+M\+M\+A\+\_\+1(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_a6bbf7eed650dd0e7c9b01f86dc1a0ed4}\label{specialradial_8cc_a6bbf7eed650dd0e7c9b01f86dc1a0ed4}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DDALPHAGAMMA\_2@{DECLARE\_DDALPHAGAMMA\_2}}
+\index{DECLARE\_DDALPHAGAMMA\_2@{DECLARE\_DDALPHAGAMMA\_2}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DDALPHAGAMMA\_2}{DECLARE\_DDALPHAGAMMA\_2}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+A\+L\+P\+H\+A\+G\+A\+M\+M\+A\+\_\+2(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_adcbc53977f4eb6b7f6bad1a3b3565ceb}\label{specialradial_8cc_adcbc53977f4eb6b7f6bad1a3b3565ceb}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DDBETA1@{DECLARE\_DDBETA1}}
+\index{DECLARE\_DDBETA1@{DECLARE\_DDBETA1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DDBETA1}{DECLARE\_DDBETA1}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+B\+E\+T\+A1(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_ac5a494348c9738db960b2683cead4372}\label{specialradial_8cc_ac5a494348c9738db960b2683cead4372}} 
+\index{specialradial.cc@{specialradial.cc}!DECLARE\_DDBETA\_1@{DECLARE\_DDBETA\_1}}
+\index{DECLARE\_DDBETA\_1@{DECLARE\_DDBETA\_1}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{DECLARE\_DDBETA\_1}{DECLARE\_DDBETA\_1}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+D\+D\+B\+E\+T\+A\+\_\+1(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_af90c48c2f20980b8ff5e17de82388f63}\label{specialradial_8cc_af90c48c2f20980b8ff5e17de82388f63}} 
+\index{specialradial.cc@{specialradial.cc}!GET\_PARTIAL@{GET\_PARTIAL}}
+\index{GET\_PARTIAL@{GET\_PARTIAL}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{GET\_PARTIAL}{GET\_PARTIAL}}
+{\footnotesize\ttfamily \#define G\+E\+T\+\_\+\+P\+A\+R\+T\+I\+AL(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{              \(\backslash\)}
+\DoxyCodeLine{    Real a,b,d,delta;         \(\backslash\)}
+\DoxyCodeLine{    int loop;           \(\backslash\)}
+\DoxyCodeLine{    partial\_frac = \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(n);       \(\backslash\)}
+\DoxyCodeLine{              \(\backslash\)}
+\DoxyCodeLine{    a = \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(n);          \(\backslash\)}
+\DoxyCodeLine{    b = \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}((n)+1);          \(\backslash\)}
+\DoxyCodeLine{    d = 1/b;            \(\backslash\)}
+\DoxyCodeLine{    delta = -\/a*d;         \(\backslash\)}
+\DoxyCodeLine{              \(\backslash\)}
+\DoxyCodeLine{    partial\_frac += delta;        \(\backslash\)}
+\DoxyCodeLine{              \(\backslash\)}
+\DoxyCodeLine{    for(loop=(n)+2;;loop++) \{       \(\backslash\)}
+\DoxyCodeLine{      if(\mbox{\hyperlink{_f_t_8h_ab6b76ee53936ed8ddc6f2c49c1e0c03b}{Fabs}}(a) < \mbox{\hyperlink{specialradial_8cc_a1e657eb32628b2e38ba320e75b5c8e07}{SPECIALRADIAL\_SMALLNUMBER}}) \textcolor{keywordflow}{break}; \(\backslash\)}
+\DoxyCodeLine{                    \(\backslash\)}
+\DoxyCodeLine{      a = \mbox{\hyperlink{specialradial_8cc_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(loop-\/1);       \(\backslash\)}
+\DoxyCodeLine{      b = \mbox{\hyperlink{specialradial_8cc_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(loop);         \(\backslash\)}
+\DoxyCodeLine{                    \(\backslash\)}
+\DoxyCodeLine{      delta *= a*d;         \(\backslash\)}
+\DoxyCodeLine{      d = 1/(b -\/ a * d);        \(\backslash\)}
+\DoxyCodeLine{      delta *= d;         \(\backslash\)}
+\DoxyCodeLine{                    \(\backslash\)}
+\DoxyCodeLine{      if(partial\_frac == partial\_frac + delta) \textcolor{keywordflow}{break}; \(\backslash\)}
+\DoxyCodeLine{      partial\_frac += delta;        \(\backslash\)}
+\DoxyCodeLine{      if(isnan(partial\_frac))       \(\backslash\)}
+\DoxyCodeLine{  return partial\_frac;        \(\backslash\)}
+\DoxyCodeLine{    \}             \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{specialradial_8cc_a1e657eb32628b2e38ba320e75b5c8e07}\label{specialradial_8cc_a1e657eb32628b2e38ba320e75b5c8e07}} 
+\index{specialradial.cc@{specialradial.cc}!SPECIALRADIAL\_SMALLNUMBER@{SPECIALRADIAL\_SMALLNUMBER}}
+\index{SPECIALRADIAL\_SMALLNUMBER@{SPECIALRADIAL\_SMALLNUMBER}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{SPECIALRADIAL\_SMALLNUMBER}{SPECIALRADIAL\_SMALLNUMBER}}
+{\footnotesize\ttfamily \#define S\+P\+E\+C\+I\+A\+L\+R\+A\+D\+I\+A\+L\+\_\+\+S\+M\+A\+L\+L\+N\+U\+M\+B\+ER~1e-\/30}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{specialradial_8cc_a9483469dc4e1ef29a6713a621aeaf928}\label{specialradial_8cc_a9483469dc4e1ef29a6713a621aeaf928}} 
+\index{specialradial.cc@{specialradial.cc}!radial\_half\_value@{radial\_half\_value}}
+\index{radial\_half\_value@{radial\_half\_value}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{radial\_half\_value()}{radial\_half\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} radial\+\_\+half\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$}]{term }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specialradial_8cc_a0a516a8b3b1b79bd0bd77d642ae705c2}\label{specialradial_8cc_a0a516a8b3b1b79bd0bd77d642ae705c2}} 
+\index{specialradial.cc@{specialradial.cc}!radial\_int\_slope@{radial\_int\_slope}}
+\index{radial\_int\_slope@{radial\_int\_slope}!specialradial.cc@{specialradial.cc}}
+\doxysubsubsection{\texorpdfstring{radial\_int\_slope()}{radial\_int\_slope()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} \mbox{\hyperlink{_f_t_8h_ae96ede8cc05c6dacf8d82df468e132cf}{F\+T\+\_\+\+P\+R\+FX}} radial\+\_\+int\+\_\+slope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{epsilon,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{q,  }\item[{int}]{m,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}}}]{lambda,  }\item[{\mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} $\ast$}]{term }\end{DoxyParamCaption})}
+

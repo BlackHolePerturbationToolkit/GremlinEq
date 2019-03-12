@@ -1,0 +1,60 @@
+\hypertarget{_tidal_h_8cc}{}\doxysection{src/utility/\+TidalH.cc File Reference}
+\label{_tidal_h_8cc}\index{src/utility/TidalH.cc@{src/utility/TidalH.cc}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+linalg.\+h$>$}\newline
+{\ttfamily \#include $<$gsl/gsl\+\_\+integration.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tensors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+W\+S\+H.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tidal\+H.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_tidal_h_8cc_a6f799b3fb32ecd6a70300d45fe1dfaad}{J\+M\+AX}}~15
+\item 
+\#define \mbox{\hyperlink{_tidal_h_8cc_a0e79a9e8cffe1242bb745b70fde53078}{J\+M\+A\+XP}}~(\mbox{\hyperlink{_tidal_h_8cc_a6f799b3fb32ecd6a70300d45fe1dfaad}{J\+M\+AX}}+1)
+\item 
+\#define \mbox{\hyperlink{_tidal_h_8cc_a97d832ae23af4f215e801e37e4f94254}{K}}~5
+\item 
+\#define \mbox{\hyperlink{_tidal_h_8cc_acf1c38f71f39386356edb151a131ad11}{T\+I\+NY}}~1.\+0e-\/25
+\item 
+\#define \mbox{\hyperlink{_tidal_h_8cc_a6ebf6899d6c1c8b7b9d09be872c05aae}{E\+PS}}~2.e-\/15
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_tidal_h_8cc_a6ebf6899d6c1c8b7b9d09be872c05aae}\label{_tidal_h_8cc_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
+\index{TidalH.cc@{TidalH.cc}!EPS@{EPS}}
+\index{EPS@{EPS}!TidalH.cc@{TidalH.cc}}
+\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
+{\footnotesize\ttfamily \#define E\+PS~2.e-\/15}
+
+\mbox{\Hypertarget{_tidal_h_8cc_a6f799b3fb32ecd6a70300d45fe1dfaad}\label{_tidal_h_8cc_a6f799b3fb32ecd6a70300d45fe1dfaad}} 
+\index{TidalH.cc@{TidalH.cc}!JMAX@{JMAX}}
+\index{JMAX@{JMAX}!TidalH.cc@{TidalH.cc}}
+\doxysubsubsection{\texorpdfstring{JMAX}{JMAX}}
+{\footnotesize\ttfamily \#define J\+M\+AX~15}
+
+\mbox{\Hypertarget{_tidal_h_8cc_a0e79a9e8cffe1242bb745b70fde53078}\label{_tidal_h_8cc_a0e79a9e8cffe1242bb745b70fde53078}} 
+\index{TidalH.cc@{TidalH.cc}!JMAXP@{JMAXP}}
+\index{JMAXP@{JMAXP}!TidalH.cc@{TidalH.cc}}
+\doxysubsubsection{\texorpdfstring{JMAXP}{JMAXP}}
+{\footnotesize\ttfamily \#define J\+M\+A\+XP~(\mbox{\hyperlink{_tidal_h_8cc_a6f799b3fb32ecd6a70300d45fe1dfaad}{J\+M\+AX}}+1)}
+
+\mbox{\Hypertarget{_tidal_h_8cc_a97d832ae23af4f215e801e37e4f94254}\label{_tidal_h_8cc_a97d832ae23af4f215e801e37e4f94254}} 
+\index{TidalH.cc@{TidalH.cc}!K@{K}}
+\index{K@{K}!TidalH.cc@{TidalH.cc}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily \#define K~5}
+
+\mbox{\Hypertarget{_tidal_h_8cc_acf1c38f71f39386356edb151a131ad11}\label{_tidal_h_8cc_acf1c38f71f39386356edb151a131ad11}} 
+\index{TidalH.cc@{TidalH.cc}!TINY@{TINY}}
+\index{TINY@{TINY}!TidalH.cc@{TidalH.cc}}
+\doxysubsubsection{\texorpdfstring{TINY}{TINY}}
+{\footnotesize\ttfamily \#define T\+I\+NY~1.\+0e-\/25}
+

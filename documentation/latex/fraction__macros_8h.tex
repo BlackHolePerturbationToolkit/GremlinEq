@@ -1,0 +1,163 @@
+\hypertarget{fraction__macros_8h}{}\doxysection{include/fraction\+\_\+macros.h File Reference}
+\label{fraction__macros_8h}\index{include/fraction\_macros.h@{include/fraction\_macros.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_a76a8d04c2cec8dc28aa72bc8ecc790bc}{P\+R\+E\+P\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA}}(type)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_a71d0f91360c9703f355f4772f6c380d1}{alphagamma}}(n)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_a4401dedb0c7bc85e8f2b2d6d376555f1}{P\+R\+E\+P\+\_\+\+B\+E\+TA}}(type)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_ac13c8b2b7efdfcd971debf8862288e63}{beta}}(n)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_ad89a3aeb217d587a2076ef320f730931}{P\+R\+E\+P\+\_\+\+A\+L\+P\+HA}}()
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_a0789702602c256eae58b8532792e9582}{alpha}}(n)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_aaf7c713887a22faac8e053a98584c903}{P\+R\+E\+P\+\_\+\+G\+A\+M\+MA}}()
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_afa648944585b238d9d996f881630ef30}{gamma}}(n)
+\item 
+\#define \mbox{\hyperlink{fraction__macros_8h_a890fdcc6e81e770a3c08d689a07e43b1}{P\+R\+E\+P\+\_\+\+A\+L\+P\+H\+A\+\_\+\+G\+A\+M\+MA}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fraction__macros_8h_a0789702602c256eae58b8532792e9582}\label{fraction__macros_8h_a0789702602c256eae58b8532792e9582}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!alpha@{alpha}}
+\index{alpha@{alpha}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \#define alpha(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\{ typeof(nu) macroa\_1 = (n) + nu;          \(\backslash\)}
+\DoxyCodeLine{    typeof(macroa\_1) macroa\_2 = macroa\_1 -\/ 1.0;       \(\backslash\)}
+\DoxyCodeLine{    iepskappa * macroa\_1 * (2.0*macroa\_1 -\/ 1.0)       \(\backslash\)}
+\DoxyCodeLine{      * (macroa\_2*macroa\_2 + epsilonsq) * (macroa\_1 + 1.0 + \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}*tau); \})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_a71d0f91360c9703f355f4772f6c380d1}\label{fraction__macros_8h_a71d0f91360c9703f355f4772f6c380d1}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!alphagamma@{alphagamma}}
+\index{alphagamma@{alphagamma}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{alphagamma}{alphagamma}}
+{\footnotesize\ttfamily \#define alphagamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\{ typeof(ag\_qoff\_e1) macroa1 = (n)+ag\_qoff\_e1;     \(\backslash\)}
+\DoxyCodeLine{    typeof(ag\_qoff\_e2) macroa2 = (n)+ag\_qoff\_e2;      \(\backslash\)}
+\DoxyCodeLine{    typeof(ag\_qoff\_t) macroa3 = (n)+ag\_qoff\_t;        \(\backslash\)}
+\DoxyCodeLine{    ag\_mult * ((n)+ag\_rt1) * ((n)+ag\_rt2) * ((n)+ag\_rt3) * ((n)+ag\_rt4) \(\backslash\)}
+\DoxyCodeLine{      *(macroa1*macroa1 + epsilonsq) * (macroa2*macroa2 + epsilonsq)  \(\backslash\)}
+\DoxyCodeLine{      *(macroa3*macroa3 + tausq); \})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_ac13c8b2b7efdfcd971debf8862288e63}\label{fraction__macros_8h_ac13c8b2b7efdfcd971debf8862288e63}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!beta@{beta}}
+\index{beta@{beta}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}}
+{\footnotesize\ttfamily \#define beta(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\{ typeof(b\_off\_in1) macrob1 = ((n) + b\_off\_in1) * ((n) + b\_off\_in2); \(\backslash\)}
+\DoxyCodeLine{    4.0 * (macrob1*(macrob1 + b\_add1) + b\_add2)       \(\backslash\)}
+\DoxyCodeLine{      * ((n) + b\_rt1) * ((n) + b\_rt2); \})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_afa648944585b238d9d996f881630ef30}\label{fraction__macros_8h_afa648944585b238d9d996f881630ef30}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!gamma@{gamma}}
+\index{gamma@{gamma}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \#define gamma(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\{ typeof(nu) macrog\_1 = (n) + nu;          \(\backslash\)}
+\DoxyCodeLine{    typeof(macrog\_1) macrog\_2 = macrog\_1 + 2.0;       \(\backslash\)}
+\DoxyCodeLine{    -\/iepskappa * (macrog\_1 + 1.0) * (2.0*macrog\_1 + 3.0)    \(\backslash\)}
+\DoxyCodeLine{      * (macrog\_2*macrog\_2 + epsilonsq) * (macrog\_1 -\/ \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}*tau); \})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_ad89a3aeb217d587a2076ef320f730931}\label{fraction__macros_8h_ad89a3aeb217d587a2076ef320f730931}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!PREP\_ALPHA@{PREP\_ALPHA}}
+\index{PREP\_ALPHA@{PREP\_ALPHA}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{PREP\_ALPHA}{PREP\_ALPHA}}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+\_\+\+A\+L\+P\+HA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} kappa = \mbox{\hyperlink{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}{Sqrt}}(1-\/q*q);     \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} iepskappa = \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}*epsilon*kappa;    \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} tau = (epsilon -\/ m*q)/kappa}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_a890fdcc6e81e770a3c08d689a07e43b1}\label{fraction__macros_8h_a890fdcc6e81e770a3c08d689a07e43b1}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!PREP\_ALPHA\_GAMMA@{PREP\_ALPHA\_GAMMA}}
+\index{PREP\_ALPHA\_GAMMA@{PREP\_ALPHA\_GAMMA}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{PREP\_ALPHA\_GAMMA}{PREP\_ALPHA\_GAMMA}}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+\_\+\+A\+L\+P\+H\+A\+\_\+\+G\+A\+M\+MA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} kappa = \mbox{\hyperlink{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}{Sqrt}}(1-\/q*q);       \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} iepskappa = \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}*epsilon*kappa;      \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} tau = (epsilon -\/ m*q)/kappa}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_a76a8d04c2cec8dc28aa72bc8ecc790bc}\label{fraction__macros_8h_a76a8d04c2cec8dc28aa72bc8ecc790bc}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!PREP\_ALPHAGAMMA@{PREP\_ALPHAGAMMA}}
+\index{PREP\_ALPHAGAMMA@{PREP\_ALPHAGAMMA}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{PREP\_ALPHAGAMMA}{PREP\_ALPHAGAMMA}}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+\_\+\+A\+L\+P\+H\+A\+G\+A\+M\+MA(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* constants for alpha\_n gamma\_\{n+1\} */}       \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} ag\_mult = 4*epsilonsq*(1 -\/ q*q);       \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* the rt variables are minus the linear roots of the poly */}   \(\backslash\)}
+\DoxyCodeLine{  const type ag\_rt1 = nu;           \(\backslash\)}
+\DoxyCodeLine{  const type ag\_rt2 = nu + 2.0;           \(\backslash\)}
+\DoxyCodeLine{  const type ag\_rt3 = nu -\/ 0.5;           \(\backslash\)}
+\DoxyCodeLine{  const type ag\_rt4 = nu + 2.5;           \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* the qoff variables are the offsets for the quadratic terms */}  \(\backslash\)}
+\DoxyCodeLine{  const type ag\_qoff\_e1 = nu -\/ 1.0;         \(\backslash\)}
+\DoxyCodeLine{  const type ag\_qoff\_e2 = nu + 3.0;         \(\backslash\)}
+\DoxyCodeLine{  const type ag\_qoff\_t = nu + 1.0}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_a4401dedb0c7bc85e8f2b2d6d376555f1}\label{fraction__macros_8h_a4401dedb0c7bc85e8f2b2d6d376555f1}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!PREP\_BETA@{PREP\_BETA}}
+\index{PREP\_BETA@{PREP\_BETA}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{PREP\_BETA}{PREP\_BETA}}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+\_\+\+B\+E\+TA(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* constants for beta\_n */}            \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* offsets for the inner n calculation */}       \(\backslash\)}
+\DoxyCodeLine{  const type b\_off\_in1 = nu;            \(\backslash\)}
+\DoxyCodeLine{  const type b\_off\_in2 = nu + 1.0;          \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* the outer roots */}             \(\backslash\)}
+\DoxyCodeLine{  const type b\_rt1 = nu + 1.5;            \(\backslash\)}
+\DoxyCodeLine{  const type b\_rt2 = nu -\/ 0.5;            \(\backslash\)}
+\DoxyCodeLine{  \textcolor{comment}{/* the additive things for the inner calulation */}      \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} b\_add1 = 2*epsilonsq -\/ epsilon*m*q -\/ lambda -\/ 2;   \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} b\_add2 = epsilon*(epsilon -\/ m*q)*(4 + epsilonsq)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{fraction__macros_8h_aaf7c713887a22faac8e053a98584c903}\label{fraction__macros_8h_aaf7c713887a22faac8e053a98584c903}} 
+\index{fraction\_macros.h@{fraction\_macros.h}!PREP\_GAMMA@{PREP\_GAMMA}}
+\index{PREP\_GAMMA@{PREP\_GAMMA}!fraction\_macros.h@{fraction\_macros.h}}
+\doxysubsubsection{\texorpdfstring{PREP\_GAMMA}{PREP\_GAMMA}}
+{\footnotesize\ttfamily \#define P\+R\+E\+P\+\_\+\+G\+A\+M\+MA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const} \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} kappa = \mbox{\hyperlink{_f_t_8h_a3fbd8d8a562a86d88e9730f655b973eb}{Sqrt}}(1-\/q*q);     \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_ae71815a9f70bd1d668591ffd98814a01}{Complex}} iepskappa = \mbox{\hyperlink{_f_t_8h_a60ef6e1bcfabb95cfeb300e1d03ce470}{I}}*epsilon*kappa;    \(\backslash\)}
+\DoxyCodeLine{  const \mbox{\hyperlink{_globals_8h_a445a5f0e2a34c9d97d69a3c2d1957907}{Real}} tau = (epsilon -\/ m*q)/kappa}
+
+\end{DoxyCode}

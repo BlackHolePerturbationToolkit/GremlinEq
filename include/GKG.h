@@ -14,6 +14,8 @@
 
 #include "Globals.h"
 
+//! Generic Kerr Geodesics Class
+/*! This class defines functions that are useful for generic Kerr geodesics. It is not used very much; its content may be subsumed into a different piece of the code in a future release. */
 class GKG {
 public:
   //

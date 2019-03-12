@@ -17,6 +17,8 @@
 #include "CEKG.h"
 #include "FT.h"
 
+//! Circular Equatorial Kerr Radiation Class
+/*! CEKR describes methods for computing various quantities to radiation from circular, equatorial Kerr geodesics. It relies on input from instances of the classes SWSH, FT, and CEKG.  */
 class CEKR {
 public:
   CEKR(SWSH *swsh_in, FT *ft_in, CEKG *cekg_in);
