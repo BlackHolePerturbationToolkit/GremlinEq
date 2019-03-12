@@ -86,18 +86,18 @@ Complex {\bfseries ZI}
 \doxysubsection{Detailed Description}
 Circular Equatorial Teukolsky Driver Class. 
 
-A class which is used to “drive” studies that look at a many circular equatorial orbits. It is essentially a holder for methods that solve \mbox{\hyperlink{class_c_e_k_r}{C\+E\+KR}} repeatedly. This class is also used to write the H\+D\+F5 data files (the “d” stands for data as well as driver). The synopsis is that the H\+D\+F5 file contains 2 groups\+: the 2 modes (i.\+e., the indices l and m) and the parameters (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Ωφ). Into the modes group goes 19 different bits of data,
+A class which is used to “drive” studies that look at a many circular equatorial orbits. It is essentially a holder for methods that solve \mbox{\hyperlink{class_c_e_k_r}{C\+E\+KR}} repeatedly. This class is also used to write the H\+D\+F5 data files (the “d” stands for data as well as driver). The synopsis is that the H\+D\+F5 file contains 2 groups\+: the 2 modes (i.\+e., the indices l and m) and the parameters (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Om\+\_\+phi). Into the modes group goes 19 different bits of data,
 \begin{DoxyItemize}
-\item The spin-\/weighted spheroidal harmonic eigenvalue λ
-\item The real and the imaginary parts of Z∞ (the amplitude of the “to infinity” Teukolsky amplitude)
-\item The real and the imaginary parts of ZH (the amplitude of the “down horizon” Teukolsky amplitude)
+\item The spin-\/weighted spheroidal harmonic eigenvalue lambda
+\item The real and the imaginary parts of Z\+\_\+\+Inf (the amplitude of the “to infinity” Teukolsky amplitude)
+\item The real and the imaginary parts of Z\+\_\+H (the amplitude of the “down horizon” Teukolsky amplitude)
 \item The real and the imaginary parts of Rin (the ingoing separated radial part of the Teukolsky function, at the orbit)
-\item The real and the imaginary parts of ∂r(\+Rin)
+\item The real and the imaginary parts of d/dr(Rin)
 \item The real and the imaginary parts of Rup (the outgoing separated radial part of the Teukolsky function, at the orbit)
-\item The real and the imaginary parts of ∂r(\+Rup)
-\item 4 fluxes carried by the radiation, Edot∞, EdotH, Lzdot∞, LzdotH
-\item The rate of change of orbital radius arising from radiation flux to infinity, rdot∞
-\item The rate of change of orbital radius arising from the down-\/horizon radiation flux, rdotH 
+\item The real and the imaginary parts of d/dr(Rup)
+\item 4 fluxes carried by the radiation, Edot\+\_\+\+Inf, Edot\+\_\+H, Lzdot\+\_\+\+Inf, Lzdot\+\_\+H
+\item The rate of change of orbital radius arising from radiation flux to infinity, rdot\+\_\+\+Inf
+\item The rate of change of orbital radius arising from the down-\/horizon radiation flux, rdot\+\_\+H 
 \end{DoxyItemize}
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

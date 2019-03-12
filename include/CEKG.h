@@ -30,6 +30,6 @@ public:
   Real a; /*!< spin paramter*/
   Real E; /*!< energy */
   Real Lz; /*!< z component of angular momentum */
-  Real Om_phi; /*!< Carter constant */
+  Real Om_phi; /*!< Axial Frequency */
 };
 #endif

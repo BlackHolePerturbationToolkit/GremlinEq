@@ -1,0 +1,24 @@
+Gremlin is a toolkit for studying solutions to the Teukolsky equation using a point-\/particle source. Gremlin\+Eq is a version of Gremlin that specializes the source to circular and equatorial orbits of \mbox{\hyperlink{class_kerr}{Kerr}} black holes. The full Gremlin package will be released publicly via the Black Hole Perturbation Toolkit; certain proprietary libraries that were used in its development must be cleaned up and replaced with Open Source resources. Gremlin\+Eq has been so cleaned, and is hereby provided as an initial release.
+
+Gremlin\+Eq depends upon\+: ~\newline
+
+\begin{DoxyItemize}
+\item The \href{https://www.gnu.org/software/gsl/}{\texttt{ G\+NU Scientific Library (G\+SL)}} version $>$= 2.\+5 ~\newline
+-\/ The \href{https://gmplib.org/}{\texttt{ G\+NU Multiple Precision Arithmetic Library (G\+MP)}} ~\newline
+-\/ The \href{http://www.fftw.org/}{\texttt{ Fastest Fourier Transform in the West}} ~\newline
+-\/ The \href{https://www.hdfgroup.org/solutions/hdf5/}{\texttt{ Hierarchical Data Format}} ~\newline
+ If you are on a Mac these are can be easily installed using \href{https://brew.sh/}{\texttt{ Brew}}. On Linux the package manager should be able to install them. We\textquotesingle{}re not sure of the best way to install them on Windows (please let us know!)
+\end{DoxyItemize}
+
+To compile Gremlin\+Eq you will need\+: ~\newline
+
+\begin{DoxyItemize}
+\item a C++ compiler (we have tested it with g++) ~\newline
+-\/ Make
+\end{DoxyItemize}
+
+Once you have compiled Gremlin\+Eq the binaries are placed in the bin/ folder. The main binary is \textquotesingle{}Circ\+\_\+\+Eq\textquotesingle{}. This will output an H\+D\+F5 file which contains information about the computed mode. Many other binaries are provided which provide additional functions -- see the documentation for details.
+
+Documentation can be found in doc/doc.\+pdf
+
+Scott Hughes 
