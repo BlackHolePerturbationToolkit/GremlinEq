@@ -24,7 +24,8 @@ Once you have compiled GremlinEq the binaries are placed in the bin/ folder. The
 
 ## Documentation
 
-Documentation can be found in doc/doc.pdf
+Initial documentation can be found in doc/doc.pdf
+Doxygen documentation can be found in doc/html/index.html
 
 ## Authors
 
