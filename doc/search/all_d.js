@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['tensor',['Tensor',['../a00248.html',1,'']]],
-  ['teuk_5fpotential',['teuk_potential',['../a00220.html#a9718095beafefd606f57cf608b605a11',1,'FT']]],
-  ['teukrin',['TeukRin',['../a00220.html#a54f941e45953dfe4e0f4415dddfa5624',1,'FT']]],
-  ['teukrup',['TeukRup',['../a00220.html#ac761976d2fc3195bde6452a89e5276d8',1,'FT']]],
-  ['tidalh',['TidalH',['../a00252.html',1,'']]]
+  ['sigma',['Sigma',['../a00228.html#abe8be093d08d3c7f45f02600b3f7cea0',1,'Kerr']]],
+  ['sinthetabrac',['sinthetabrac',['../a00240.html#add5598b17ac2f1e4ebdb4f983d59a368',1,'Clebsch']]],
+  ['swsh',['SWSH',['../a00244.html',1,'SWSH'],['../a00244.html#a9c6f1ccc3816ade366ddb55d505a79ba',1,'SWSH::SWSH()']]]
 ];

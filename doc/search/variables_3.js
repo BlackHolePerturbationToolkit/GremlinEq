@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['om_5fphi',['Om_phi',['../a00208.html#a1971702fa59fcdd0bf54cc1639dc5c47',1,'CEKG']]]
+  ['lambda',['lambda',['../a00200.html#aeb4323489f21ca7c2754cb973db0b94f',1,'CEDR']]],
+  ['lz',['Lz',['../a00208.html#a40b7e950de1a5942ec19c999e2ec3e9d',1,'CEKG']]]
 ];
