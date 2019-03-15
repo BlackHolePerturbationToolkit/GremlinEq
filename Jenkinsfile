@@ -9,7 +9,11 @@ pipeline {
         dir(path: 'gh-pages') {
           sh 'git add .'
           sh 'git -c user.name="BHPT Jenkins" -c user.email="" commit -am "Update documentation" || true'
-          sh 'git push'
+          withCredentials([sshUserPrivateKey(credentialsId: 'gremlin', keyFileVariable: 'SSH_KEY')]) {
+            withEnv(["GIT_SSH_COMMAND=ssh -vvv -o StrictHostKeyChecking=no -i ${SSH_KEY}"]) {
+              sh 'git push git@github.com:BlackHolePerturbationToolkit/GremlinEq.git gh-pages'
+            }
+          }
         }
       }
     }
