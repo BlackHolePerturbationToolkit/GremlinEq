@@ -109,12 +109,12 @@ public:
   Real tolerance, accuracy_in, accuracy_up;
   Real rin_request_precision, rup_request_precision;
 
-  Complex nu;
+  Complex nu;									//!< The renormalized angular momentum
   Complex b_trans, b_inc, c_trans;
 
-  Complex rteuk_in, rteuk_up;
-  Complex drteuk_in, drteuk_up;
-  Complex ddrteuk_in, ddrteuk_up;
+  Complex rteuk_in, rteuk_up;					//!< Radial Teukolsky function
+  Complex drteuk_in, drteuk_up;					//!< First derivatives of radial Teukolsky function
+  Complex ddrteuk_in, ddrteuk_up;				//!< Second derivatives of the radial Teukolsky function
 
   int up_choices[FT_MAXDIVS];
   Real up_choice_locs[FT_MAXDIVS];

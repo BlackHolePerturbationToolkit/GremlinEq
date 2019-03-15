@@ -78,8 +78,8 @@ public:
   Real E, lambda;
 
   Real b[MAXCOFS + 1];
-  int lmin; // Minimum {\it harmonic} index in array
-  int N; // Maximum index in array
+  int lmin; 						//<! Minimum {\it harmonic} index in array
+  int N; 							//<! Maximum index in array
 
   int Gl;
 
