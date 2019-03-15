@@ -51,19 +51,19 @@ inline NUMBER Min(const NUMBER a, const NUMBER b) {
 /*! This is a simple container class for a collection of useful simply static functions that pop up over and over again when studying Kerr black hole orbits. */
 class Kerr {
  public:
-  /*!> r_+ = M + \sqrt{M^2 + a^2}; M \equiv 1 */
+  /*!> \f[ r_+ = M + \sqrt{M^2 + a^2} \f] */
   static Real rplus(const Real a)
     {
       return(1. + sqrt((1. - a)*(1. + a)));
     }; 
 
-  /*!> r_- = M - \sqrt{M^2 - a^2} */
+  /*!> \f[ r_- = M - \sqrt{M^2 - a^2} \f] */
   static Real rminus(const Real a)
     {
       return(1. - sqrt((1. - a)*(1. + a)));
     };
 
-  /*!> r^* = r + 2 r_+/(r_+ - r_-) \ln{(r - r_+)/2M} - 2 r_-/(r_+ - r_-) \ln{(r - r_-)/2M} */
+  /*!> \f[ r^* = r + 2 r_+/(r_+ - r_-) \ln{(r - r_+)/2M} - 2 r_-/(r_+ - r_-) \ln{(r - r_-)/2M} \f] */
   static Real rstar(const Real r, const Real a)
     {
       const Real rm = rminus(a);
@@ -73,13 +73,13 @@ class Kerr {
 	     ((2.*rm)/(rp - rm))*log((r - rm)/2.));
     };
 
-  /*!> \Delta  = r^2 - 2 M r + a^2 */
+  /*!> \f[ \Delta  = r^2 - 2 M r + a^2 \f] */
   static Real Delta(const Real r, const Real a)
     {
       return(r*r - 2.*r + a*a);
     }
 
-  /*!> d\Delta/dr  = 2 r - 2 M */
+  /*!> \f[ d\Delta/dr  = 2 r - 2 M \f] */
   static Real dr_Delta(const Real r)
     {
       return(2.*(r - 1.));
@@ -91,7 +91,7 @@ class Kerr {
       return(2.);
     }
 
-  /*!> \Sigma = r^2 + a^2 \cos^2\theta */
+  /*!> \f[ \Sigma = r^2 + a^2 \cos^2\theta \f] */
   static Real Sigma(const Real r, const Real a, const Real z)
     {
       return(r*r + a*a*z);

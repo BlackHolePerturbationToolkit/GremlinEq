@@ -2,16 +2,17 @@
 @ @licstart  The following is the entire license notice for the
 JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+Copyright (C) 1997-2017 by Dimitri van Heesch
 
 This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
@@ -35,12 +36,14 @@ var menudata={children:[
 {text:"g",url:"functions.html#index_g"},
 {text:"k",url:"functions.html#index_k"},
 {text:"l",url:"functions.html#index_l"},
+{text:"n",url:"functions.html#index_n"},
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
-{text:"w",url:"functions.html#index_w"}]},
+{text:"w",url:"functions.html#index_w"},
+{text:"z",url:"functions.html#index_z"}]},
 {text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func.html#index_b"},

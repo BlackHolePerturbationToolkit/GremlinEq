@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['om_5fphi',['Om_phi',['../class_c_e_k_g.html#a1971702fa59fcdd0bf54cc1639dc5c47',1,'CEKG']]]
+  ['n',['N',['../class_s_w_s_h.html#ad21958c42272fa2e16c0927ff6cb26b3',1,'SWSH']]],
+  ['nu',['nu',['../class_f_t.html#abd1a8d13d5d7fd2a35131255ee7a8e3d',1,'FT']]]
 ];
