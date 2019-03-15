@@ -23,7 +23,7 @@ class CEKR {
 public:
   CEKR(SWSH *swsh_in, FT *ft_in, CEKG *cekg_in);
 
-  Complex ZI, ZH;				//<! The complex Teukolsky amplitudes
+  Complex ZI, ZH;				//!< The complex Teukolsky amplitudes
 
 private:
   Complex rho_func();
