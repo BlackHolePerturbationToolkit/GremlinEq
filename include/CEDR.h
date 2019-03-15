@@ -38,7 +38,7 @@ public:
   //
   int lmin, lmax, mmin, mmax;
   //
-  Real lambda;
+  Real lambda;											//!< spin-weighted spheroidal eigenvalue
   Complex ZI, ZH;
   Complex Rin, dRin, Rup, dRup;
   Real EdotI, EdotH, LzdotI, LzdotH, rdotI, rdotH;
