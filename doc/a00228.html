@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -211,8 +217,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>= r^2 - 2 M r + a^2 </p>
-</blockquote>
+<p class="formulaDsp">
+\[ \Delta = r^2 - 2 M r + a^2 \]
+</p>
+ </blockquote>
 
 </div>
 </div>
@@ -240,8 +248,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>d/dr = 2 r - 2 M </p>
-</blockquote>
+<p class="formulaDsp">
+\[ d\Delta/dr = 2 r - 2 M \]
+</p>
+ </blockquote>
 
 </div>
 </div>
@@ -298,8 +308,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>r_- = M - {M^2 - a^2} </p>
-</blockquote>
+<p class="formulaDsp">
+\[ r_- = M - \sqrt{M^2 - a^2} \]
+</p>
+ </blockquote>
 
 </div>
 </div>
@@ -327,8 +339,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>r_+ = M + {M^2 + a^2}; M  1 </p>
-</blockquote>
+<p class="formulaDsp">
+\[ r_+ = M + \sqrt{M^2 + a^2} \]
+</p>
+ </blockquote>
 
 </div>
 </div>
@@ -366,8 +380,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>r^* = r + 2 r_+/(r_+ - r_-) {(r - r_+)/2M} - 2 r_-/(r_+ - r_-) {(r - r_-)/2M} </p>
-</blockquote>
+<p class="formulaDsp">
+\[ r^* = r + 2 r_+/(r_+ - r_-) \ln{(r - r_+)/2M} - 2 r_-/(r_+ - r_-) \ln{(r - r_-)/2M} \]
+</p>
+ </blockquote>
 
 </div>
 </div>
@@ -411,8 +427,10 @@ static Real&#160;</td><td class="memItemRight" valign="bottom"><b>isco_ret</b> (
 </table>
 </div><div class="memdoc">
 <blockquote class="doxtable">
-<p>= r^2 + a^2 ^2 </p>
-</blockquote>
+<p class="formulaDsp">
+\[ \Sigma = r^2 + a^2 \cos^2\theta \]
+</p>
+ </blockquote>
 
 </div>
 </div>
