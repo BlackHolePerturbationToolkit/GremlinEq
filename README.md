@@ -26,7 +26,7 @@ Once you have compiled GremlinEq the binaries are placed in the bin/ folder. The
 
 Initial documentation can be found in doc/doc.pdf  
 
-Doxygen documentation can be found in doc/html/index.html
+Doxygen documentation is automatically re-generated with each commit and can be found at: [http://bhptoolkit.org/GremlinEq/doc/](http://bhptoolkit.org/GremlinEq/doc/). You can also generate the documentation locally by running `doxygen` in the root folder.
 
 ## Authors
 
