@@ -121,12 +121,9 @@ int main(int argc, char **argv)
   Edot_tot = EdotI_tot + EdotH_tot;
   Lzdot_tot = LzdotI_tot + LzdotH_tot;
   rdot = rdotI_tot + rdotH_tot;
-  //
-  Real v = pow(fabs(Om_phi), 1./3.);
-  Real EdotN = (32./5.)*pow(v, 10.);
 
   fprintf(stdout, "EdotH: %.16e EdotI: %.16e Edottot: %.16e\n",
- 	  EdotH_tot/EdotN, EdotI_tot/EdotN, (EdotH_tot + EdotI_tot)/EdotN);
+ 	  EdotH_tot, EdotI_tot, EdotH_tot + EdotI_tot);
   //
   // Output all the harmonics
   //
