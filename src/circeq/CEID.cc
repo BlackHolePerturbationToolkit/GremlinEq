@@ -42,7 +42,7 @@ CEID::CEID(char *basename, const Real arrmin, const Real rmax, const Real dr,
     else if (dr < 0.1)
       sprintf(inname, "%s_r%3.2lf.h5", basename, radius);
     else
-      sprintf(inname, "%s_r%2.1lf.h5n", basename, radius);
+      sprintf(inname, "%s_r%2.1lf.h5", basename, radius);
     ReadIn(inname);
   }
   //
