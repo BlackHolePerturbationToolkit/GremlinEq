@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// $Id: CEID.cc,v 1.46 2019/01/24 20:41:23 sahughes Exp $
+// $Id: CEID.cc,v 1.48 2019/04/22 23:29:51 sahughes Exp sahughes $
 //
 //---------------------------------------------------------------------------
 //
@@ -69,11 +69,11 @@ CEID::CEID(char *basename, const int Nhi, const int ellmax) : jmax(Nhi), lmax(el
     sprintf(inname, "%s_%d.h5", basename, j+1);
     ReadIn(inname);
   }
+  rmin = r_arr[0];
   //
   // Make radial splines
   //
   Make_radial_splines();
-  rmin = r_arr[1];
 }
 
 void CEID::Allocate()
