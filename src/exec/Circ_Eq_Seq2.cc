@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// $Id: Circ_Eq_Seq2.cc,v 1.17 2018/08/02 16:27:33 sahughes Exp $
+// $Id: Circ_Eq_Seq2.cc,v 1.18 2019/04/22 14:04:28 sahughes Exp sahughes $
 //
 //---------------------------------------------------------------------------
 #include <cstdlib>
@@ -54,8 +54,13 @@ int main(int argc, char **argv)
   const int N_start = atoi(argv[7]);
   const int N_stop = atoi(argv[8]);
   if (N_start > N_tot) {
-    cerr << "N_start > N_tot ... that ain't right." << endl;
+    cerr << "N_start cannot be greater than N_tot!" << endl;
     exit(2);
+  }
+  if (N_start > N_stop) {
+    cerr << "Code steps from N_start to N_stop ..." << endl;
+    cerr << "... please select N_start <= N_stop." << endl;
+    exit(3);
   }
   int i;
   Real v, r;
