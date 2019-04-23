@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// $Id: Circ_Eq_TotFlux_r.cc,v 1.10 2018/08/04 16:18:40 sahughes Exp $
+// $Id: Circ_Eq_TotFlux_r.cc,v 1.11 2019/04/23 16:28:19 sahughes Exp sahughes $
 //
 //---------------------------------------------------------------------------
 //
@@ -49,7 +49,7 @@ int main(int argc, char **argv)
     exit(3);
   }
   int j;
-  for (j = 1; j <= ceid.jmax; j++) {
+  for (j = 0; j < ceid.jmax; j++) {
     Real rad = ceid.r_arr[j];
     ceid.Get_rdot_omega(rad);
     ceid.Get_fluxes(rad);

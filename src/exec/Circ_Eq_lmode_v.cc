@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// $Id: Circ_Eq_lmode_v.cc,v 1.8 2018/08/04 16:18:40 sahughes Exp $
+// $Id: Circ_Eq_lmode_v.cc,v 1.9 2019/04/23 16:28:19 sahughes Exp sahughes $
 //
 //---------------------------------------------------------------------------
 //
@@ -53,7 +53,7 @@ int main(int argc, char **argv)
   int j;
   rad = ceid.r_arr[1];
   ceid.Get_rdot_omega(rad);
-  for (j = 1; j <= ceid.jmax; j++) {
+  for (j = 0; j < ceid.jmax; j++) {
     rad = ceid.r_arr[j];
     ceid.Get_rdot_omega(rad);
     v = pow(fabs(ceid.Omega), 1./3.);

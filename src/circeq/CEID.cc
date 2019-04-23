@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
 //
-// $Id: CEID.cc,v 1.48 2019/04/22 23:29:51 sahughes Exp sahughes $
+// $Id: CEID.cc,v 1.49 2019/04/23 16:27:12 sahughes Exp sahughes $
 //
 //---------------------------------------------------------------------------
 //
@@ -35,8 +35,8 @@ CEID::CEID(char *basename, const Real arrmin, const Real rmax, const Real dr,
   // Read in data.
   //
   Omega_max = 0.;
-  for (j = 1; j <= jmax; j++) {
-    Real radius = rmin + (j - 1)*dr;
+  for (j = 0; j < jmax; j++) {
+    Real radius = rmin + j*dr;
     if (dr < 0.01)
       sprintf(inname, "%s_r%4.3lf.h5", basename, radius);
     else if (dr < 0.1)
