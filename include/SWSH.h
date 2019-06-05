@@ -133,10 +133,4 @@ private:
   Real aw;
 };
 
-SWSH **SWSHmatrix(const long nrl, const long nrh,
-		  const long ncl, const long nch);
-void free_SWSHmatrix(SWSH **m,
-		     const long nrl, const long nrh,
-		     const long ncl, const long nch);
-
 #endif
