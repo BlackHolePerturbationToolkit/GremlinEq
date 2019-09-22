@@ -121,7 +121,8 @@ int FT_PRFX renangmom(Real epsilon, Real q, int l, int m, Real lambda,
   if(halfval < 0) {
     if(iinttest) {
       if(renangmom_iint(epsilon, q, l, m, lambda, &nupart)) {
-	*nu = 1.0 + I*nupart;
+// 	*nu = 1.0 + I*nupart;
+	*nu = l - I*nupart;
 	return 1;
       }
     } else {
@@ -134,13 +135,15 @@ int FT_PRFX renangmom(Real epsilon, Real q, int l, int m, Real lambda,
       /* Root placement tests inconsistent */
     } else {
       if(renangmom_half(epsilon, q, l, m, lambda, &nupart)) {
-	*nu = - 0.5 + I*nupart;
+// 	*nu = - 0.5 + I*nupart;
+	*nu = 0.5 + I*nupart;
 	return 1;
       }
     }
   }
 
   /* Search failed - might as well throw everything at it */
+
   return renangmom_far(epsilon,q,l,m,lambda,nu);
 }
 
