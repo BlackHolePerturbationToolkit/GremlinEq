@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['wave',['Wave',['../a00236.html#aa4c7459330a127a0cb963ddf38919376',1,'RRGW::Wave(const int m, const Real t_ret, const Real phi, const Real S, const Real w, const Complex ZI, Real &amp;hplus, Real &amp;hcross)'],['../a00236.html#a406402f984e81a0d305b1397ce3b925e',1,'RRGW::Wave(const int m, const int k, const Real N_m, const Real N_k, const Real phi, const Real S, const Real w, const Complex ZH, Real &amp;hplus, Real &amp;hcross)']]]
+  ['tensor',['Tensor',['../a00248.html',1,'']]],
+  ['teuk_5fpotential',['teuk_potential',['../a00220.html#a9718095beafefd606f57cf608b605a11',1,'FT']]],
+  ['teukrin',['TeukRin',['../a00220.html#a54f941e45953dfe4e0f4415dddfa5624',1,'FT']]],
+  ['teukrup',['TeukRup',['../a00220.html#ac761976d2fc3195bde6452a89e5276d8',1,'FT']]],
+  ['tidalh',['TidalH',['../a00252.html',1,'']]]
 ];
