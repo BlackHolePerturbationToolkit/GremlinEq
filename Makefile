@@ -47,7 +47,7 @@ AR = ar rv
 
 SYSLIBS = -lhdf5 -lhdf5_hl -lgsl -lgslcblas -lfftw3 -lm -lgmp
 
-CFLAGS = -O2 -fomit-frame-pointer -Wall -Wno-unused -Wno-uninitialized -Wno-deprecated
+CFLAGS = -O2 -Wall -Wno-unused -Wno-uninitialized -Wno-deprecated
 
 #############################################################################
 #

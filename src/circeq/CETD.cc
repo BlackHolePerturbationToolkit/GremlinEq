@@ -41,21 +41,21 @@ CETD::CETD(const int orbitsense, const Real rad, const Real spin, char outbase[]
   //
   sprintf(outname, "%s.h5", outbase);
   CEDR cedr(outname);
-  if(cedr.exists){
-	  hdffile = cedr.infile;
-	  
-      Real file_params[5];
-      H5LTread_dataset_double(cedr.infile, "/params/", file_params);
-	  for(int n = 0; n < 5; n++){
-		if(file_params[n] != params[n]) {
-			cout << "Output file " << outname << " exists but has different spacetime/orbit parameters. Please choose a different filename." << endl;
-			exit(0);
-		}
-	  }
-  }else{
-	  hdffile = H5Fcreate(outname, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
-	  hid_t group_id = H5Gcreate2(hdffile, "/modes", H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-	  H5LTmake_dataset_double(hdffile, "/params", 1, dim, params);
+  if(cedr.exists) {
+    hdffile = cedr.infile;
+    
+    Real file_params[5];
+    H5LTread_dataset_double(cedr.infile, "/params/", file_params);
+    for(int n = 0; n < 5; n++){
+      if(file_params[n] != params[n]) {
+	cout << "Output file " << outname << " exists but has different spacetime/orbit parameters. Please choose a different filename." << endl;
+	exit(0);
+      }
+    }
+  } else {
+    hdffile = H5Fcreate(outname, H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+    hid_t group_id = H5Gcreate2(hdffile, "/modes", H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
+    H5LTmake_dataset_double(hdffile, "/params", 1, dim, params);
   }
   
 }

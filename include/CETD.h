@@ -21,9 +21,11 @@
 
 //! Circular Equatorial Teukolsky Driver Class
 /*! A class which is used to “drive” studies that look at a many circular equatorial orbits. 
-It is essentially a holder for methods that solve CEKR repeatedly. This class is also used to write the HDF5 data files (the “d” stands for data as well as driver). 
-The synopsis is that the HDF5 file contains 2 groups: the 2 modes (i.e., the indices l and m) and the parameters (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Om_phi). 
-Into the modes group goes 19 different bits of data,
+    It is essentially a holder for methods that solve CEKR repeatedly. This class is also used to
+    write the HDF5 data files (the “d” stands for data as well as driver).  The synopsis is that
+    the HDF5 file contains 2 groups: the 2 modes (i.e., the indices l and m) and the parameters
+    (orbital radius r, spin parameter a, energy E, axial angular momentum Lz, and axial frequency Om_phi). 
+    Into the modes group goes 19 different bits of data,
 * - The spin-weighted spheroidal harmonic eigenvalue lambda
 * - The real and the imaginary parts of Z_Inf (the amplitude of the “to infinity” Teukolsky amplitude)
 * - The real and the imaginary parts of Z_H (the amplitude of the “down horizon” Teukolsky amplitude)
