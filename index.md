@@ -11,6 +11,6 @@ Gremlin is Teukolsky equation solver for a point particle on a bound, timelike o
 Documentation for Gremlin can be automatically generated from the source code using Doxygen. A
 version generated with the latest git revision is available on the [documentation page](doc).
 
-## Authors
+## Authors and contributors
 
-Scott Hughes
+**Scott Hughes**, Halston Lim, Niels Warburton
