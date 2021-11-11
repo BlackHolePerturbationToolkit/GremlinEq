@@ -11,7 +11,7 @@ GremlinEq depends upon:
 - The [Fastest Fourier Transform in the West][3]  
 - The [Hierarchical Data Format][4]  
 	
-If you are on a Mac these are can be easily installed using [Brew][5]. On Linux the package manager should be able to install them. We're not sure of the best way to install them on Windows (please let us know!)
+If you are on a Mac these are can be easily installed using [Brew][5]. On Linux the package manager should be able to install them. To install on Windows it is recommended to use the Windows Subsystem for Linux. Further instructions can be found in the Install-Windows.md file in the /doc folder.
 	
 To compile GremlinEq you will need:  
 
